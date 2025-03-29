@@ -15,13 +15,13 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`px-4 w-full ufixed top-0 justify-between items-center z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/80 backdrop-blur shadow-sm" : "bg-white"
+      className={`bg-violet-300 w-full fixed top-0 justify-between items-center transition-all duration-300 ${
+        scrolled ? "bg-white/80 backdrop-blur shadow-sm" : ""
       }`}
     >
-      <div className="flex items-center justify-between">
+      <div className="flex items-center ">
         {/* Links */}
-        <div className="hidden md:flex space-x-6 text-gray-600">
+        <div className=" px-4 hidden md:flex space-x-6 text-gray-600">
           <Link to="/about" className="hover:text-black">Über mich</Link>
           <Link to="/projects" className="hover:text-black">Projekte</Link>
         </div>
@@ -32,13 +32,13 @@ const Navbar = () => {
             <img
               src={logo}
               alt="Logo Maria"
-              className="h-10 md:h-12 "
+              className="h-10 md:h-12 px-4"
             />
           </Link>
         </div>
 
         {/* Rechts */}
-        <div className="md:flex space-x-6 text-gray-600">
+        <div className="md:flex space-x-6 text-gray-600 px-4">
           <Link to="/contact" className="hover:text-black">Kontakt</Link>
           <Link to="/" className="hover:text-black">Startseite</Link>
         </div>

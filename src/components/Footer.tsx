@@ -4,7 +4,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4">
           <p>© {new Date().getFullYear()} Maria. Alle Rechte vorbehalten.</p>
           <p className="mt-1">
-            <a href="mailto:maria.wallberg@email.de" className="underline hover:text-gray-700">
+            <a href="mailto:mariawallberg04@gmail.com" target="_blank" rel="noopener noreferrercome" className="underline hover:text-gray-700">
               Kontakt per E-Mail
             </a>
           </p>
