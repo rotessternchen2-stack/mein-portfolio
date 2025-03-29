@@ -1,0 +1,13 @@
+import { Link } from "react-router-dom";
+
+const Navbar = () => {
+  return (
+    <div >
+      <h1 >Willkommen auf meiner Portfolio-Seite!</h1>
+      <p >Hier findest du Infos über mich und meine Projekte.</p>
+    </div>
+  );
+
+};
+
+export default Navbar;
