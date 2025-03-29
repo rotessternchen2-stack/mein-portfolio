@@ -2,10 +2,14 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div >
-      <h1 >Willkommen auf meiner Portfolio-Seite!</h1>
-      <p >Hier findest du Infos über mich und meine Projekte.</p>
+    <nav className="bg-gray-100 p-4 shadow">
+    <div className="flex gap-4">
+      <Link to="/" className="hover:underline">Home</Link>
+      <Link to="/about" className="hover:underline">Über mich</Link>
+      <Link to="/projects" className="hover:underline">Projekte</Link>
+      <Link to="/contact" className="hover:underline">Kontakt</Link>
     </div>
+  </nav>
   );
 
 };

@@ -15,15 +15,18 @@ function App() {
 
   return (
     <>
-      <div>
-        <Navbar/>
-        <div className='text-5xl font-bold underline text-red-400'>
-        <About/>
-        </div>
-        <Home/>
-        <Projects/>
-        <Contact/>
+
+      <Router>
+      <Navbar />
+      <div className="p-6">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </div>
+    </Router>
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
