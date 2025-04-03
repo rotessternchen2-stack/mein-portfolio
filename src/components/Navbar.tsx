@@ -8,7 +8,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <nav className="bg-green-200 border-b border-green-300 fixed w-full z-50">
+    <nav className="bg-green-200 border-b-2 border-solid rounded-b-2xl border-green-700 fixed w-full z-50">
       <div className="max-w-screen-xl mx-auto px-6 py-3 flex items-center justify-between text-gray-900">
         
         {/* Linkgruppe Links */}
@@ -55,7 +55,7 @@ const Navbar = () => {
 
         {/* Logo zentriert */}
         <Link to="/" className="flex-shrink-0">
-          <img src={logo} alt="Logo Maria" className="h-10 md:h-12" />
+          <img src={logo} alt="Logo Maria" className="max-h-14" />
         </Link>
 
         {/* Linkgruppe Rechts */}

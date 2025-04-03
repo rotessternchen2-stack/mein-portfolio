@@ -1,4 +1,4 @@
-const Pages = () => {
+const Portfolio = () => {
     return (
       <div >
         <h1 >Willkommen auf meiner Portfolio-Seite!</h1>
@@ -7,4 +7,4 @@ const Pages = () => {
     );
   };
   
-  export default Pages;
+  export default Portfolio;
