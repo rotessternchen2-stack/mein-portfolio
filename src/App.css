@@ -1,0 +1,17 @@
+/* Größe für Überschriften */
+h1 {
+    font-size: 2.5rem; /* 2.5rem für h1 */
+  }
+  
+  h2 {
+    font-size: 2rem; /* 2rem für h2 */
+  }
+  
+  h3 {
+    font-size: 1.5rem; /* 1.5rem für h3 */
+  }
+  
+  p {
+    font-size: 1rem; /* Standardgröße für Paragraphen */
+  }
+  
