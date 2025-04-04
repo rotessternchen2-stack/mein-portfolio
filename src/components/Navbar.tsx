@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link,  Navigate , useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/logoMaria.svg";
 
 const Navbar = () => {
@@ -10,13 +10,9 @@ const Navbar = () => {
   return (
     <nav className="bg-green-200 border-b-2 border-solid rounded-b-2xl border-green-700 fixed w-full z-50">
       <div className="max-w-screen-xl mx-auto px-6 py-3 flex items-center justify-between text-gray-900">
-        
-        {/* Linkgruppe Links */}
         <div className="flex space-x-8 items-center">
           <Link to="/about" className="hover:text-green-700 transition">Über mich</Link>
           <Link to="/do" className="hover:text-green-700 transition">Do</Link>
-
-          {/* Portfolio Dropdown */}
           <div className="relative">
             <button
                 onClick={() => {
