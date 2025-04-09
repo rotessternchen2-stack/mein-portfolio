@@ -5,10 +5,12 @@ const Home = () => {
   const firstName = "Maria";
     return (
       <div className="mx-16">
-        <div className="flex items-center ">
-          <div className="colms w-1/3 ">
+        <div className="flex items-center justify-between ">
+          <div className="colms w-1/2">
+          <div className="pb-16">
         <h1>Ich bin {firstName}, </h1>
         <h3>Designer & Kreativer Kopfs aus Leidenschaft.</h3>
+        </div>
         <p>Schön, dass du hier bist! Ich bin {firstName}, ein kreativer Designer, der es liebt, sowohl digitale als auch analoge Projekte zu gestalten. Egal ob Webseiten, Apps, Printmedien oder Crossmedia-Kampagnen – ich entwickle Lösungen, die nicht nur visuell überzeugen, sondern auch die Benutzererfahrung in den Mittelpunkt stellen.</p>
         </div>
         <img src={mariaProfil} alt="Maria" className="max-h-80 rounded-md items-end" />
