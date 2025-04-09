@@ -8,21 +8,18 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <nav className="bg-green-200 border-b-2 border-solid rounded-b-2xl border-green-700 fixed w-full z-50">
-      <div className="max-w-screen-xl mx-auto px-6 py-3 flex items-center justify-between text-gray-900">
-        <div className="flex space-x-8 items-center">
-          <Link to="/about" className="hover:text-green-700 transition">Über mich</Link>
-          <Link to="/do" className="hover:text-green-700 transition">Do</Link>
-          <div className="relative">
+    <nav className="grid grid-cols-5 items-center justify-center text-center bg-green-200 text-gray-900 border-b-2 border-solid rounded-b-2xl border-green-700 fixed w-full z-50">
+          <Link to="/about" className="hover:text-green-700 ">Über mich</Link>
+          <div className="relative flex justify-center ">
             <button
                 onClick={() => {
                 navigate("/Portfolio");
                 setIsDropdownOpen(!isDropdownOpen);
                 }}
-                className="flex items-center hover:text-green-700 transition"
-                >
+                className="hover:text-green-700 flex justify-center items-center"
+              >
                 Portfolio
-                <svg className="w-3 h-3 ml-1" fill="none" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-3 h-3 ml-1 " fill="none" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
                  </svg>
             </button>
@@ -30,9 +27,9 @@ const Navbar = () => {
             {isDropdownOpen && (
               <div
                 onMouseLeave={() => setIsDropdownOpen(false)}
-                className="absolute left-0 mt-2 w-40 bg-white border border-green-300 rounded-md shadow-md z-50"
+                className="absolute top-full mt-1.6 bg-white border border-green-300 rounded-md w-32 shadow-md z-50"
               >
-                <ul className="py-2 text-sm text-gray-700">
+                <ul className=" text-sm text-gray-700">
                   {Array.from({ length: 2025 - 2014 + 1 }, (_, i) => (
                     <li key={i}>
                       <Link
@@ -46,20 +43,21 @@ const Navbar = () => {
                 </ul>
               </div>
             )}
-          </div>
-        </div>
+            </div>
+          
+        
 
         {/* Logo zentriert */}
-        <Link to="/" className="flex-shrink-0">
+        <Link to="/" className="flex justify-center">
           <img src={logo} alt="Logo Maria" className="max-h-14" />
         </Link>
 
         {/* Linkgruppe Rechts */}
-        <div className="flex space-x-8 items-center">
+        
           <Link to="/contact" className="hover:text-green-700 transition">Kontakt</Link>
           <Link to="/" className="hover:text-green-700 transition">Startseite</Link>
-        </div>
-      </div>
+        
+      
     </nav>
   );
 };
