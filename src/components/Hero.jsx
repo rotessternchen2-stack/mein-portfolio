@@ -1,8 +1,12 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import OrganicShape from './OrganicShape';
 import PlantOverlay from './PlantOverlay';
+import { useTranslation } from '@hooks/useTranslation';
 
 const Hero = ({ imageSrc, imageAlt, title, subtitle }) => {
+  const { t } = useTranslation();
+  
   return (
     <div className="relative w-full min-h-screen overflow-hidden bg-gradient-to-br from-primary-50 via-primary-100 to-accent-100">
       
@@ -44,19 +48,19 @@ const Hero = ({ imageSrc, imageAlt, title, subtitle }) => {
             </h2>
             
             <div className="pt-4 flex gap-4 flex-wrap">
-              <a 
-                href="#portfolio" 
+              <Link 
+                to="/portfolio" 
                 className="group relative px-8 py-4 bg-primary-500 text-white rounded-full font-medium hover:bg-primary-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
               >
-                Meine Arbeiten ansehen
+                {t('hero.buttons.portfolio')}
                 <span className="ml-2 inline-block group-hover:translate-x-1 transition-transform">→</span>
-              </a>
-              <a 
-                href="#contact" 
+              </Link>
+              <Link 
+                to="/contact" 
                 className="px-8 py-4 bg-white text-primary-600 rounded-full font-medium hover:bg-primary-50 transition-all duration-300 shadow-md hover:shadow-lg border-2 border-primary-200"
               >
-                Kontakt aufnehmen
-              </a>
+                {t('hero.buttons.contact')}
+              </Link>
             </div>
           </div>
           

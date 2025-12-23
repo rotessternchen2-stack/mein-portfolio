@@ -159,3 +159,4 @@ Das Portfolio wurde vollständig nach React Best Practices modernisiert und opti
 
 Der Code ist jetzt wartbar, erweiterbar und folgt modernen Web-Standards.
 
+

@@ -2,7 +2,11 @@ export const homeTranslations = {
   de: {
     hero: {
       title: "Hi, ich bin Maria! 👋",
-      subtitle: "Mediendesignerin • UX/UI Design • Frontend-Entwicklung • Kreative Konzepte ✨"
+      subtitle: "Mediendesignerin • UX/UI Design • Frontend-Entwicklung • Kreative Konzepte ✨",
+      buttons: {
+        portfolio: "Meine Arbeiten ansehen",
+        contact: "Kontakt aufnehmen"
+      }
     },
     intro: "Hey! 👋 Ich bin Maria – Mediendesignerin mit Leidenschaft für kreative digitale Lösungen. Während meines dualen Studiums bei Check24 habe ich gelernt, wie man digitale Produkte gestaltet, die nicht nur visuell überzeugen, sondern auch intuitiv funktionieren. Von UX/UI Design über Frontend-Entwicklung bis hin zu Social Media – ich liebe es, Ideen zum Leben zu erwecken und dabei sowohl strategisch als auch kreativ zu denken! ✨",
     
@@ -61,7 +65,11 @@ export const homeTranslations = {
   en: {
     hero: {
       title: "Hi, I'm Maria! 👋",
-      subtitle: "Media Designer • UX/UI Design • Frontend Development • Creative Concepts ✨"
+      subtitle: "Media Designer • UX/UI Design • Frontend Development • Creative Concepts ✨",
+      buttons: {
+        portfolio: "View My Work",
+        contact: "Get In Touch"
+      }
     },
     intro: "Hey! 👋 I'm Maria – a media designer passionate about creative digital solutions. During my dual studies at Check24, I learned how to design digital products that are not only visually compelling but also intuitively functional. From UX/UI design to frontend development to social media – I love bringing ideas to life while thinking both strategically and creatively! ✨",
     

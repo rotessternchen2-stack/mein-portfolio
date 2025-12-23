@@ -74,3 +74,4 @@ QRCode.propTypes = {
 
 export default QRCode;
 
+
