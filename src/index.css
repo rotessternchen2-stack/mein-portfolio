@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Sanfter Off-White Hintergrund für die gesamte Seite */
+body {
+  background-color: #fefefe; /* Sehr sanftes Off-White */
+  color: #1f2937; /* Dunkle Schrift für guten Kontrast */
+}
