@@ -142,7 +142,7 @@ const Home = () => {
                 Monstera und Alocasia sind nicht nur wunderschön, sondern auch super resilient – 
                 genau wie gutes Design! Sie passen sich an, wachsen in verschiedene Richtungen 
                 und jedes Blatt ist einzigartig. Das erinnert mich daran, dass jedes Projekt 
-                seine eigene Form finden darf. Plus: Sie sehen einfach mega aus! 🌱✨
+                seine eigene Form finden darf. Plus: Die sehen einfach mega aus! 🌱✨
               </p>
             </details>
           </div>

@@ -27,15 +27,15 @@ Für mich ist Design mehr als nur "schön machen". Es geht darum, Probleme zu l�
 📍 Aktuell
 Ich beende mein Studium im März 2026 und bin ab April 2026 verfügbar für neue Herausforderungen im Bereich Design und Frontend-Entwicklung. Bis dahin arbeite ich fleißig an meinem Abschluss und sammle weiter praktische Erfahrungen in verschiedenen Projekten!
 
-Lass uns zusammen etwas Großartiges schaffen – ich freu mich auf deine Nachricht! 🚀`
+Fragen oder Interesse? Ich freue mich über eine Nachricht! 🚀`
     },
     portfolio: {
       title: "Portfolio",
       content: "Von Corporate Websites über Social-Media-Kampagnen bis hin zu Printmedien – hier siehst du eine Auswahl meiner Arbeiten. Jedes Projekt erzählt seine eigene Geschichte und zeigt, wie vielseitig Design sein kann. Spoiler: Auch ein Hundesalon-Webauftritt ist dabei! 🐕✨"
     },
     contact: {
-      title: "Du hast eine Idee für ein Projekt oder eine Frage?",
-      subtitle: "Ich freue mich darauf, von dir zu hören und gemeinsam etwas Großartiges zu schaffen.",
+      title: "Fragen oder Interesse?",
+      subtitle: "Ich freue mich darauf, von dir zu hören!",
       name: "Name",
       email: "E-Mail",
       subject: "Betreff", 
@@ -71,15 +71,15 @@ For me, design is more than just "making things pretty". It's about solving prob
 📍 Currently
 I'm finishing my studies in March 2026 and will be available for new challenges in design and frontend development from April 2026. Until then, I'm working hard on my degree and continuing to gain practical experience in various projects!
 
-Let's create something amazing together – I'm looking forward to hearing from you! 🚀`
+Questions or interested? I'd love to hear from you! 🚀`
     },
     portfolio: {
       title: "Portfolio", 
       content: "From corporate websites to social media campaigns to print media – here's a selection of my work. Each project tells its own story and shows how versatile design can be. Spoiler: There's even a dog salon website! 🐕✨"
     },
     contact: {
-      title: "Do you have an idea for a project or a question?",
-      subtitle: "I'm excited to hear from you and create something great together.",
+      title: "Questions or interested?",
+      subtitle: "I'd love to hear from you!",
       name: "Name",
       email: "Email",
       subject: "Subject",

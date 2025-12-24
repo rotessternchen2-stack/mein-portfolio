@@ -93,7 +93,7 @@ const Contact = () => {
       if (submitCount >= 3) {
         setErrors({
           ...errors,
-          submit: 'Zu viele Anfragen. Bitte warten Sie 5 Minuten.'
+          submit: 'Zu viele Anfragen. Bitte warte 5 Minuten.'
         });
         return;
       }
@@ -143,12 +143,12 @@ const Contact = () => {
       console.error('Fehler beim Senden:', error);
       
       // Detaillierte Error-Messages
-      let errorMessage = 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.';
+      let errorMessage = 'Ein Fehler ist aufgetreten. Bitte versuche es erneut.';
       
       if (error.message.includes('nicht konfiguriert')) {
         errorMessage = 'Formular nicht konfiguriert. Bitte Public Key in .env eintragen!';
       } else if (!navigator.onLine) {
-        errorMessage = 'Keine Internetverbindung. Bitte überprüfen Sie Ihre Verbindung.';
+        errorMessage = 'Keine Internetverbindung. Bitte überprüfe deine Verbindung.';
       } else {
         errorMessage = error.message || errorMessage;
       }
@@ -189,7 +189,7 @@ const Contact = () => {
           <div className="space-y-6">
             <div className="bg-white rounded-3xl p-8 shadow-lg border-2 border-primary-100 hover:border-primary-300 transition-all duration-300">
               <h2 className="text-2xl font-bold text-neutral-900 mb-6 flex items-center gap-2">
-                <span>💼</span> Warum mit mir arbeiten?
+                <span>💼</span> Warum ich?
               </h2>
               
               <div className="space-y-4">

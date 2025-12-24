@@ -1,0 +1,182 @@
+# Maria's Portfolio - Cursor Rules
+
+## 🎯 Projekt-Kontext
+Dies ist Marias persönliches Portfolio - eine moderne React-Anwendung mit Fokus auf Design, UX/UI und kreative Konzepte.
+
+## 📦 Tech Stack
+- **Framework**: React 19 (Vite)
+- **Styling**: Tailwind CSS (mit custom colors & organic shapes)
+- **Routing**: React Router DOM
+- **Internationalization**: Custom i18n mit Context API
+- **Email Service**: EmailJS
+- **Icons & Shapes**: Custom SVG Components
+
+## 🚫 Wichtige Verbote
+
+### Keine Markdown-Dateien
+- **NIEMALS** `.md` Dateien erstellen (README.md, SETUP.md, etc.)
+- Dokumentation nur auf Anfrage des Nutzers
+- Bei Anleitungen: Direkt im Chat erklären
+
+### Keine temporären Dateien
+- Keine Helper-Scripts oder Workaround-Dateien
+- Nur produktionsreife Dateien committen
+- Cleanup nach sich selbst
+
+## 📝 Code-Style & Konventionen
+
+### Importe
+- **Komplette Importe verwenden** - keine unvollständigen Pfade
+- **Alias-Pfade nutzen**: `@components`, `@hooks`, `@assets`, `@services`
+- **Grouped Imports**: 
+  1. React & External Libraries
+  2. Internal Components & Hooks
+  3. Assets & Styles
+
+Beispiel:
+```javascript
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Hero from '@components/Hero';
+import { useTranslation } from '@hooks/useTranslation';
+import mariaHero from '@assets/maria-hero.png';
+```
+
+### React Best Practices
+- **Functional Components** mit Hooks
+- **PropTypes** für alle Props
+- **Custom Hooks** für wiederverwendbare Logik
+- **Komponentenstruktur**: Eine Komponente pro Datei
+- **JSX-Formatierung**: Lesbar und konsistent eingerückt
+
+### Tailwind CSS
+- **Utility-First** Approach
+- **Custom Colors nutzen**: `primary-*`, `accent-*` (siehe tailwind.config.js)
+- **Responsive Design**: Mobile-first mit `md:`, `lg:` Breakpoints
+- **Organic Shapes**: Custom `rounded-organic` und SVG-Shapes verwenden
+- **Keine inline styles** außer für dynamische Werte
+
+### Naming Conventions
+- **Components**: PascalCase (`Hero.jsx`, `PrimaryButton.jsx`)
+- **Hooks**: camelCase mit `use` Prefix (`useTranslation.js`)
+- **Assets**: kebab-case (`maria-hero.png`)
+- **Variables**: camelCase (`formData`, `isSubmitting`)
+- **Constants**: UPPER_SNAKE_CASE (`EMAILJS_CONFIG`)
+
+## 🌐 Internationalisierung
+
+### Translation Keys
+- Immer strukturiert: `category.subcategory.key`
+- Beispiel: `hero.buttons.portfolio`, `contact.form.name.placeholder`
+- **Du-Form** für deutsche Texte (nie "Sie")
+- Konsistente Emojis: 🌿 für Natur, 🐕 für Hunde, ✨ für Highlights
+
+### Tone of Voice
+- **Empathisch & witzig** aber professionell
+- **Modern** mit Tech-Referenzen (KI, Tools)
+- **NICHT Freelancer-Sprache**: 
+  - ❌ "Zusammenarbeit", "Dienstleistung", "Angebot"
+  - ✅ Fokus auf Kompetenzen und Erfahrungen
+- **Persönlich**: Hundefriseur-Anekdoten, Pflanzen-Liebe
+
+## 🔒 Sicherheit & Performance
+
+### Environment Variables
+- **Sensitive Daten** immer in `.env` (NEVER commit!)
+- Prefix: `VITE_` für Vite-Variablen
+- Beispiel: `VITE_EMAILJS_PUBLIC_KEY`
+
+### Forms & Input
+- **Input Sanitization**: XSS-Protection
+- **Rate Limiting**: Max 3 Submissions in 5 Minuten
+- **Email Validation**: Regex-Check
+- **Error Handling**: Try-catch mit user-friendly Messages
+
+### Performance
+- **Lazy Loading** für große Components
+- **Image Optimization**: WebP wo möglich
+- **Code Splitting**: Vite macht das automatisch
+
+## 🎨 Design-System
+
+### Farben (siehe tailwind.config.js)
+- **Primary**: Grün-Töne (50-900) für Hauptelemente
+- **Accent**: Akzent-Grün für Highlights
+- **Neutral**: Grau-Töne für Text
+- **Organische Formen**: Custom SVG Shapes
+
+### Components
+- **Reusable Components**: `OrganicShape`, `PlantOverlay`, `Timeline`, `QRCode`
+- **Consistent Spacing**: Tailwind spacing scale
+- **Hover States**: Immer mit Transitions
+- **Accessibility**: Semantic HTML, aria-labels, alt-texts
+
+## 📂 Projektstruktur
+
+```
+src/
+├── components/     # Reusable UI Components
+├── pages/         # Route Components
+├── hooks/         # Custom React Hooks
+├── translations/  # i18n Files
+├── services/      # API Services (EmailJS)
+├── assets/        # Images, SVGs
+└── main.jsx       # Entry Point
+```
+
+## 🚀 Deployment
+
+### Vercel
+- **Environment Variables** in Vercel Dashboard setzen
+- **Build Command**: `npm run build`
+- **Output Directory**: `dist`
+- **Framework Detection**: Vite
+
+### Git Workflow
+- **Aussagekräftige Commit Messages** (Emoji optional)
+- **NIEMALS** `.env` Dateien committen
+- **NIEMALS** `node_modules` committen
+- `.gitignore` beachten
+
+## 🐛 Debugging
+
+### Linting
+- `read_lints` Tool nutzen nach Edits
+- Errors sofort fixen
+- TypeScript-Fehler vermeiden (PropTypes nutzen)
+
+### Testing
+- Browser-Tools für Live-Testing nutzen
+- Responsive Design auf verschiedenen Breakpoints checken
+- EmailJS im Browser testen (nicht nur im Code)
+
+## 💡 Spezielle Regeln für dieses Projekt
+
+### Maria's Präferenzen
+1. **Design über Development**: UX/UI und Grafikdesign im Fokus
+2. **Organische Formen**: Rundungen statt scharfe Kanten
+3. **Pflanzen-Thema**: Monstera & Alocasia als Easter Eggs
+4. **Hunde-Referenzen**: Subtil und witzig einbauen
+5. **Keine Freelancer-Sprache**: Portfolio für Angestelltenverhältnis
+
+### Content-Guidelines
+- **Hardfacts** schnell auffindbar (Geburtsdatum, Email, Skills)
+- **Fun Facts** zur Persönlichkeit
+- **Timeline** mit "Mehr anzeigen" für lange Texte
+- **QR Code** zum Google Drive Portfolio
+
+## ✅ Checklist vor Commit
+
+- [ ] Alle Importe vollständig?
+- [ ] PropTypes definiert?
+- [ ] Tailwind Classes korrekt?
+- [ ] Translations aktualisiert (DE + EN)?
+- [ ] Keine `.md` Dateien erstellt?
+- [ ] `.env` nicht committet?
+- [ ] Linter-Errors gefixt?
+- [ ] Responsive Design getestet?
+
+---
+
+**Wichtig**: Immer React 19 + Vite + Tailwind CSS verwenden. Keine anderen Frameworks ohne Rücksprache!
+

@@ -1,36 +1,36 @@
 export const contactTranslations = {
   de: {
-    title: "Lass uns quatschen! ☕",
-    subtitle: "Bereit für dein nächstes Projekt?",
-    description: "Du hast ein spannendes Projekt, eine kreative Idee oder eine Frage? Perfekt! Füll einfach das Formular aus und ich melde mich zurück – garantiert schneller als ein Hund auf 'Leckerli!' reagiert. 🐕",
+    title: "Fragen? Ich bin für dich da! ☕",
+    subtitle: "Schreib mir einfach",
+    description: "Du hast eine Frage oder möchtest mehr über meine Arbeit erfahren? Füll einfach das Formular aus und ich melde mich zurück – garantiert schneller als ein Hund auf 'Leckerli!' reagiert. 🐕",
     
     form: {
       name: {
         label: "Name",
-        placeholder: "Wie heißt du?",
+        placeholder: "Max Mustermann (oder wie auch immer du heißt 😊)",
         error: "Name ist erforderlich"
       },
       email: {
         label: "E-Mail",
-        placeholder: "deine@email.de (keine Sorge, kein Spam!)",
+        placeholder: "deine@email.de (versprochen, kein Spam!)",
         errorRequired: "E-Mail ist erforderlich",
         errorInvalid: "Hmm, das sieht nicht nach einer gültigen E-Mail aus 🤔"
       },
       subject: {
         label: "Betreff",
-        placeholder: "Neues Projekt? Frage? Oder einfach Hallo sagen?",
+        placeholder: "Worum geht's? (Neugierig bin ich schon! 👀)",
         error: "Betreff ist erforderlich"
       },
       message: {
         label: "Nachricht",
-        placeholder: "Erzähl mir von deiner Idee – ich bin ganz Ohr! 👂",
+        placeholder: "Erzähl mir mehr – ich lese jede Nachricht! ☕",
         error: "Nachricht ist erforderlich",
         errorShort: "Ein bisschen mehr bitte – mindestens 10 Zeichen! 😊"
       },
       submit: "Nachricht senden",
       submitting: "Wird gesendet... ✉️",
       successMessage: "Yay! 🎉 Deine Nachricht ist bei mir angekommen. Ich melde mich so schnell wie möglich zurück!",
-      errorMessage: "Oops! 😅 Da ist was schiefgelaufen. Versuch's nochmal oder schreib mir direkt eine E-Mail!"
+      errorMessage: "Oops! 😅 Da ist was schiefgelaufen. Versuch's nochmal oder schreib mir direkt!"
     },
 
     info: {
@@ -50,30 +50,30 @@ export const contactTranslations = {
   },
 
   en: {
-    title: "Let's chat! ☕",
-    subtitle: "Ready for your next project?",
-    description: "Got an exciting project, a creative idea, or a question? Perfect! Just fill out the form and I'll get back to you – guaranteed faster than a dog reacts to 'treat!' 🐕",
+    title: "Questions? I'm here! ☕",
+    subtitle: "Just drop me a message",
+    description: "Got a question or want to learn more about my work? Just fill out the form and I'll get back to you – guaranteed faster than a dog reacts to 'treat!' 🐕",
     
     form: {
       name: {
         label: "Name",
-        placeholder: "What's your name?",
+        placeholder: "John Doe (or whatever your name is 😊)",
         error: "Name is required"
       },
       email: {
         label: "Email",
-        placeholder: "your@email.com (don't worry, no spam!)",
+        placeholder: "your@email.com (promise, no spam!)",
         errorRequired: "Email is required",
         errorInvalid: "Hmm, that doesn't look like a valid email 🤔"
       },
       subject: {
         label: "Subject",
-        placeholder: "New project? Question? Or just saying hi?",
+        placeholder: "What's this about? (I'm curious already! 👀)",
         error: "Subject is required"
       },
       message: {
         label: "Message",
-        placeholder: "Tell me about your idea – I'm all ears! 👂",
+        placeholder: "Tell me more – I read every message! ☕",
         error: "Message is required",
         errorShort: "A bit more please – at least 10 characters! 😊"
       },

@@ -2,7 +2,7 @@ export const homeTranslations = {
   de: {
     hero: {
       title: "Hi, ich bin Maria! 👋",
-      subtitle: "Mediendesignerin • UX/UI Design • Frontend-Entwicklung • Kreative Konzepte ✨",
+      subtitle: "Mediendesignerin • UX/UI Design • Grafikdesign • Kreative\u00A0Konzepte ✨",
       buttons: {
         portfolio: "Meine Arbeiten ansehen",
         contact: "Kontakt aufnehmen"
@@ -22,15 +22,15 @@ export const homeTranslations = {
       },
       crossmedia: {
         title: "Crossmedia-Kampagnen",
-        description: "Ich entwickle integrierte Kampagnen, die auf verschiedenen Kanälen (Web, Social Media, Print) eine konsistente Markenbotschaft vermitteln und deine Zielgruppe ansprechen."
+        description: "Ich entwickle integrierte Kampagnen, die auf verschiedenen Kanälen (Web, Social Media, Print) eine konsistente Markenbotschaft vermitteln und Zielgruppen gezielt ansprechen."
       },
       socialMedia: {
-        title: "Social Media Betreuung",
+        title: "Social Media",
         description: "Bei KulturLeben Leipzig und Leadfluss habe ich Social-Media-Kanäle betreut und gelernt: Content ist King, aber Timing ist Queen! Von Reels über Stories bis zu Posts – ich erstelle Content, der nicht nur scrollbar ist, sondern auch hängen bleibt. Canva, Business Suite und ein gutes Auge für Trends inklusive."
       },
       branding: {
         title: "Branding & Corporate Identity",
-        description: "Deine Marke soll sich anfühlen wie ein guter Freund, den man sofort wiedererkennt? Ich entwickle visuelle Identitäten, die authentisch, einprägsam und vor allem: einzigartig sind. Von Logo bis Styleguide – alles aus einer Hand, alles mit Herz."
+        description: "Eine starke Marke wird sofort wiedererkannt und bleibt im Gedächtnis. Ich entwickle visuelle Identitäten, die authentisch, einprägsam und vor allem: einzigartig sind. Von Logo bis Styleguide – durchdacht, konsistent und mit Herz gestaltet."
       },
       creative: {
         title: "Kreative Kampagnen & Konzepte",
@@ -39,8 +39,8 @@ export const homeTranslations = {
     },
 
     whyMe: {
-      title: "Warum du mit mir arbeiten solltest",
-      intro: "Weil ich nicht nur Pixel schiebe, sondern mitdenke. Weil ich sowohl Frontend-Code als auch Hundefell in Form bringen kann. Und vor allem: Weil ich mit Leidenschaft bei der Sache bin!",
+      title: "Was mich auszeichnet",
+      intro: "Ich schiebe nicht nur Pixel, sondern denke mit. Ob Frontend-Code oder Hundefell – ich bringe beides in Form. Und vor allem: Ich bin mit Leidenschaft bei der Sache!",
       creativity: {
         title: "💡 Kreativität mit Köpfchen",
         description: "Ich denke nicht in Templates, sondern in Möglichkeiten. Jedes Projekt ist eine neue Chance, etwas Besonderes zu schaffen – mit frischen Ideen und KI-Power als Sidekick."
@@ -51,21 +51,21 @@ export const homeTranslations = {
       },
       strategy: {
         title: "🎯 Strategie trifft Ästhetik",
-        description: "Schön allein reicht nicht. Ich entwickle Designs, die nicht nur gut aussehen, sondern auch deine Ziele erreichen – datenbasiert, nutzerzentriert und mit Blick fürs große Ganze."
+        description: "Schön allein reicht nicht. Ich entwickle Designs, die nicht nur gut aussehen, sondern auch Ziele erreichen – datenbasiert, nutzerzentriert und mit Blick fürs große Ganze."
       }
     },
 
     cta: {
-      title: "Lass uns was Cooles bauen! 🚀",
-      description: "Du hast eine Idee, die umgesetzt werden will? Oder einfach nur eine vage Vorstellung von 'irgendwas mit Design'? Perfekt! Ich liebe es, gemeinsam Projekte zum Leben zu erwecken und kreative Lösungen zu entwickeln, die wirklich funktionieren.",
-      button: "Jetzt Kontakt aufnehmen"
+      title: "Bereit für neue Herausforderungen! 🚀",
+      description: "Kreative Lösungen entwickeln, die wirklich funktionieren – das ist meine Leidenschaft. Ob digitale Produkte, crossmediale Kampagnen oder innovative Konzepte: Ich bringe frische Perspektiven und hands-on Mentalität mit!",
+      button: "Kontakt aufnehmen"
     }
   },
 
   en: {
     hero: {
       title: "Hi, I'm Maria! 👋",
-      subtitle: "Media Designer • UX/UI Design • Frontend Development • Creative Concepts ✨",
+      subtitle: "Media Designer • UX/UI Design • Graphic Design • Creative\u00A0Concepts ✨",
       buttons: {
         portfolio: "View My Work",
         contact: "Get In Touch"
@@ -85,7 +85,7 @@ export const homeTranslations = {
       },
       crossmedia: {
         title: "Cross-media Campaigns",
-        description: "I develop integrated campaigns that convey a consistent brand message across different channels (web, social media, print) and appeal to your target audience."
+        description: "I develop integrated campaigns that convey a consistent brand message across different channels (web, social media, print) and effectively reach target audiences."
       },
       socialMedia: {
         title: "Social Media Management",
@@ -93,7 +93,7 @@ export const homeTranslations = {
       },
       branding: {
         title: "Branding & Corporate Identity",
-        description: "Want your brand to feel like a good friend you recognize instantly? I develop visual identities that are authentic, memorable, and above all: unique. From logo to style guide – everything from one source, everything with heart."
+        description: "A strong brand is instantly recognizable and memorable. I develop visual identities that are authentic, impactful, and above all: unique. From logo to style guide – thoughtfully designed, consistent, and crafted with heart."
       },
       creative: {
         title: "Creative Campaigns & Concepts",
@@ -102,8 +102,8 @@ export const homeTranslations = {
     },
 
     whyMe: {
-      title: "Why you should work with me",
-      intro: "Because I don't just push pixels, I think along. Because I can shape both frontend code and dog fur. And most importantly: Because I'm passionate about what I do!",
+      title: "What sets me apart",
+      intro: "I don't just push pixels, I think strategically. Whether it's frontend code or dog fur – I can shape both. And most importantly: I'm passionate about what I do!",
       creativity: {
         title: "💡 Creativity with Brains",
         description: "I don't think in templates, but in possibilities. Every project is a new chance to create something special – with fresh ideas and AI power as my sidekick."
@@ -114,14 +114,14 @@ export const homeTranslations = {
       },
       strategy: {
         title: "🎯 Strategy Meets Aesthetics",
-        description: "Beauty alone isn't enough. I develop designs that not only look good but also achieve your goals – data-driven, user-centered, and with an eye on the big picture."
+        description: "Beauty alone isn't enough. I develop designs that not only look good but also achieve goals – data-driven, user-centered, and with an eye on the big picture."
       }
     },
 
     cta: {
-      title: "Let's build something cool! 🚀",
-      description: "Got an idea that needs to come to life? Or just a vague notion of 'something with design'? Perfect! I love bringing projects to life and developing creative solutions that really work.",
-      button: "Contact me now"
+      title: "Ready for new challenges! 🚀",
+      description: "Developing creative solutions that really work – that's my passion. Whether it's digital products, cross-media campaigns, or innovative concepts: I bring fresh perspectives and a hands-on mentality!",
+      button: "Get in touch"
     }
   }
 };

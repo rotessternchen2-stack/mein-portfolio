@@ -90,6 +90,147 @@ const About = () => {
         </div>
       </div>
 
+      {/* Hardfacts Section */}
+      <div className="relative py-8 px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-gradient-to-br from-white via-primary-50 to-accent-50 rounded-3xl p-8 shadow-xl border-2 border-primary-200 relative overflow-hidden">
+            {/* Organischer Hintergrund */}
+            <div className="absolute -top-16 -right-16 w-64 h-64 text-primary-100 opacity-30 pointer-events-none">
+              <OrganicShape variant="blob1" className="w-full h-full" animate={false} />
+            </div>
+            
+            <div className="relative z-10">
+              <h2 className="text-3xl font-display font-bold text-neutral-900 mb-8 text-center">
+                📋 Auf einen Blick
+              </h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* Geburtsdatum */}
+                <div className="bg-white rounded-2xl p-5 shadow-md hover:shadow-lg transition-all duration-300 border border-primary-100">
+                  <div className="flex items-start gap-3">
+                    <span className="text-3xl">🎂</span>
+                    <div>
+                      <p className="text-xs font-semibold text-primary-600 uppercase tracking-wide mb-1">Geburtsdatum</p>
+                      <p className="text-lg font-bold text-neutral-900">01.05.2004</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Email */}
+                <div className="bg-white rounded-2xl p-5 shadow-md hover:shadow-lg transition-all duration-300 border border-primary-100">
+                  <div className="flex items-start gap-3">
+                    <span className="text-3xl">📧</span>
+                    <div>
+                      <p className="text-xs font-semibold text-primary-600 uppercase tracking-wide mb-1">Email</p>
+                      <a 
+                        href="mailto:maria.wallberg04@gmail.com" 
+                        className="text-sm font-bold text-primary-600 hover:text-primary-800 underline break-all"
+                      >
+                        maria.wallberg04@gmail.com
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Abschluss */}
+                <div className="bg-white rounded-2xl p-5 shadow-md hover:shadow-lg transition-all duration-300 border border-primary-100">
+                  <div className="flex items-start gap-3">
+                    <span className="text-3xl">🎓</span>
+                    <div>
+                      <p className="text-xs font-semibold text-primary-600 uppercase tracking-wide mb-1">Abschluss</p>
+                      <p className="text-lg font-bold text-neutral-900">B.A. Mediendesign</p>
+                      <p className="text-sm text-neutral-600">März 2026</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Standort */}
+                <div className="bg-white rounded-2xl p-5 shadow-md hover:shadow-lg transition-all duration-300 border border-accent-100">
+                  <div className="flex items-start gap-3">
+                    <span className="text-3xl">📍</span>
+                    <div>
+                      <p className="text-xs font-semibold text-accent-600 uppercase tracking-wide mb-1">Standort</p>
+                      <p className="text-lg font-bold text-neutral-900">Leipzig</p>
+                      <p className="text-sm text-neutral-600">Deutschland</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Key Skills */}
+                <div className="bg-white rounded-2xl p-5 shadow-md hover:shadow-lg transition-all duration-300 border border-accent-100">
+                  <div className="flex items-start gap-3">
+                    <span className="text-3xl">💼</span>
+                    <div>
+                      <p className="text-xs font-semibold text-accent-600 uppercase tracking-wide mb-1">Schwerpunkte</p>
+                      <p className="text-sm font-bold text-neutral-900 leading-relaxed">
+                        UX/UI Design<br/>
+                        Social Media<br/>
+                        Grafikdesign
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Sprachen */}
+                <div className="bg-white rounded-2xl p-5 shadow-md hover:shadow-lg transition-all duration-300 border border-accent-100">
+                  <div className="flex items-start gap-3">
+                    <span className="text-3xl">🌍</span>
+                    <div>
+                      <p className="text-xs font-semibold text-accent-600 uppercase tracking-wide mb-1">Sprachen</p>
+                      <p className="text-sm font-bold text-neutral-900 leading-relaxed">
+                        Deutsch (C1)<br/>
+                        Englisch (B2)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Tools */}
+                <div className="bg-white rounded-2xl p-5 shadow-md hover:shadow-lg transition-all duration-300 border border-primary-100">
+                  <div className="flex items-start gap-3">
+                    <span className="text-3xl">🛠️</span>
+                    <div>
+                      <p className="text-xs font-semibold text-primary-600 uppercase tracking-wide mb-1">Haupttools</p>
+                      <p className="text-sm font-bold text-neutral-900 leading-relaxed">
+                        Figma, Adobe CC<br/>
+                        ChatGPT, Cursor<br/>
+                        Canva
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Verfügbarkeit */}
+                <div className="bg-white rounded-2xl p-5 shadow-md hover:shadow-lg transition-all duration-300 border border-primary-100">
+                  <div className="flex items-start gap-3">
+                    <span className="text-3xl">📅</span>
+                    <div>
+                      <p className="text-xs font-semibold text-primary-600 uppercase tracking-wide mb-1">Verfügbarkeit</p>
+                      <p className="text-lg font-bold text-neutral-900">ab April 2026</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Studiengang */}
+                <div className="bg-white rounded-2xl p-5 shadow-md hover:shadow-lg transition-all duration-300 border border-accent-100">
+                  <div className="flex items-start gap-3">
+                    <span className="text-3xl">📚</span>
+                    <div>
+                      <p className="text-xs font-semibold text-accent-600 uppercase tracking-wide mb-1">Studiengang</p>
+                      <p className="text-sm font-bold text-neutral-900 leading-relaxed">
+                        Duales Studium<br/>
+                        Mediendesign (B.A.)<br/>
+                        IU & Check24
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Fun Facts Section */}
       <div className="relative py-16 px-8 bg-gradient-to-br from-primary-50 via-white to-accent-50">
         <div className="max-w-6xl mx-auto">
@@ -102,7 +243,7 @@ const About = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Pflanzen-Leidenschaft */}
             <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-primary-200 hover:border-primary-400 hover:-translate-y-2 group">
               <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">🌿</div>

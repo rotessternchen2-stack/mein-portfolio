@@ -37,7 +37,7 @@ const Impressum = () => {
                 E-Mail: maria.wallberg04@gmail.com
               </p>
               <p className="text-sm text-neutral-600 mt-3">
-                Für weitere Kontaktmöglichkeiten nutzen Sie bitte das Kontaktformular auf dieser Website.
+                Für weitere Kontaktmöglichkeiten nutze gerne das Kontaktformular auf dieser Website.
               </p>
             </section>
 

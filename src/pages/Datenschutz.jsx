@@ -27,16 +27,16 @@ const Datenschutz = () => {
               
               <h3 className="text-xl font-semibold text-neutral-900 mt-6 mb-3">Allgemeine Hinweise</h3>
               <p className="leading-relaxed mb-4">
-                Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen 
-                Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit 
-                denen Sie persönlich identifiziert werden können.
+                Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit deinen personenbezogenen 
+                Daten passiert, wenn du diese Website besuchst. Personenbezogene Daten sind alle Daten, mit 
+                denen du persönlich identifiziert werden kannst.
               </p>
 
               <h3 className="text-xl font-semibold text-neutral-900 mt-6 mb-3">Datenerfassung auf dieser Website</h3>
               <p className="leading-relaxed mb-4">
                 <strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong><br />
                 Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten 
-                können Sie dem Abschnitt „Hinweis zur verantwortlichen Stelle" in dieser Datenschutzerklärung entnehmen.
+                kannst du dem Abschnitt „Hinweis zur verantwortlichen Stelle" in dieser Datenschutzerklärung entnehmen.
               </p>
             </section>
 
@@ -55,8 +55,8 @@ const Datenschutz = () => {
               
               <h3 className="text-xl font-semibold text-neutral-900 mt-6 mb-3">Datenschutz</h3>
               <p className="leading-relaxed mb-4">
-                Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln 
-                Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften 
+                Ich nehme den Schutz deiner persönlichen Daten sehr ernst und behandle 
+                deine personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften 
                 sowie dieser Datenschutzerklärung.
               </p>
 
@@ -68,7 +68,7 @@ const Datenschutz = () => {
                 E-Mail: maria.wallberg04@gmail.com
               </p>
               <p className="text-sm text-neutral-600 mt-3">
-                Für weitere Kontaktmöglichkeiten nutzen Sie bitte das Kontaktformular auf dieser Website.
+                Für weitere Kontaktmöglichkeiten nutze gerne das Kontaktformular auf dieser Website.
               </p>
             </section>
 
@@ -77,40 +77,40 @@ const Datenschutz = () => {
               
               <h3 className="text-xl font-semibold text-neutral-900 mt-6 mb-3">Kontaktformular</h3>
               <p className="leading-relaxed mb-4">
-                Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem 
-                Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der 
-                Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht 
-                ohne Ihre Einwilligung weiter.
+                Wenn du mir per Kontaktformular Anfragen zukommen lässt, werden deine Angaben aus dem 
+                Anfrageformular inklusive der von dir dort angegebenen Kontaktdaten zwecks Bearbeitung der 
+                Anfrage und für den Fall von Anschlussfragen bei mir gespeichert. Diese Daten gebe ich nicht 
+                ohne deine Einwilligung weiter.
               </p>
               <p className="leading-relaxed mb-4">
-                Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre 
+                Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern deine 
                 Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher 
-                Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem 
-                berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen 
+                Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf meinem 
+                berechtigten Interesse an der effektiven Bearbeitung der an mich gerichteten Anfragen 
                 (Art. 6 Abs. 1 lit. f DSGVO).
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-primary-700 mb-4">5. Ihre Rechte</h2>
+              <h2 className="text-2xl font-bold text-primary-700 mb-4">5. Deine Rechte</h2>
               <p className="leading-relaxed mb-4">
-                Sie haben das Recht:
+                Du hast das Recht:
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>gemäß Art. 15 DSGVO Auskunft über Ihre von uns verarbeiteten personenbezogenen Daten zu verlangen</li>
-                <li>gemäß Art. 16 DSGVO unverzüglich die Berichtigung unrichtiger oder Vervollständigung Ihrer bei uns gespeicherten personenbezogenen Daten zu verlangen</li>
-                <li>gemäß Art. 17 DSGVO die Löschung Ihrer bei uns gespeicherten personenbezogenen Daten zu verlangen</li>
-                <li>gemäß Art. 18 DSGVO die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen</li>
-                <li>gemäß Art. 20 DSGVO Ihre personenbezogenen Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten</li>
-                <li>gemäß Art. 21 DSGVO Widerspruch gegen die Verarbeitung Ihrer personenbezogenen Daten einzulegen</li>
+                <li>gemäß Art. 15 DSGVO Auskunft über deine von mir verarbeiteten personenbezogenen Daten zu verlangen</li>
+                <li>gemäß Art. 16 DSGVO unverzüglich die Berichtigung unrichtiger oder Vervollständigung deiner bei mir gespeicherten personenbezogenen Daten zu verlangen</li>
+                <li>gemäß Art. 17 DSGVO die Löschung deiner bei mir gespeicherten personenbezogenen Daten zu verlangen</li>
+                <li>gemäß Art. 18 DSGVO die Einschränkung der Verarbeitung deiner personenbezogenen Daten zu verlangen</li>
+                <li>gemäß Art. 20 DSGVO deine personenbezogenen Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten</li>
+                <li>gemäß Art. 21 DSGVO Widerspruch gegen die Verarbeitung deiner personenbezogenen Daten einzulegen</li>
               </ul>
             </section>
 
             <section>
               <h2 className="text-2xl font-bold text-primary-700 mb-4">6. Externe Links</h2>
               <p className="leading-relaxed mb-4">
-                Diese Website enthält Links zu externen Websites (z.B. LinkedIn, Instagram). Sobald Sie auf einen 
-                externen Link klicken, gelten die Datenschutzbestimmungen der jeweiligen Plattform. Wir haben 
+                Diese Website enthält Links zu externen Websites (z.B. LinkedIn, Instagram). Sobald du auf einen 
+                externen Link klickst, gelten die Datenschutzbestimmungen der jeweiligen Plattform. Ich habe 
                 keinen Einfluss auf die Datenverarbeitung durch diese externen Anbieter.
               </p>
             </section>

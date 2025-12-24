@@ -449,13 +449,13 @@ const Portfolio = () => {
         {/* CTA */}
         <div className="mt-16 text-center">
           <p className="text-lg text-neutral-700 mb-6">
-            Interesse an einer Zusammenarbeit?
+            Fragen zu meinen Projekten?
           </p>
           <a 
             href="/contact" 
             className="inline-block px-8 py-4 bg-gradient-to-r from-primary-500 to-accent-500 text-white font-bold rounded-full hover:from-primary-600 hover:to-accent-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
           >
-            Lass uns reden! 💬
+            Melde dich gerne! 💬
           </a>
         </div>
       </article>
