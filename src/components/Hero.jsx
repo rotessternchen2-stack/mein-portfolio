@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import OrganicShape from './OrganicShape';
 import PlantOverlay from './PlantOverlay';
+import ExpandableText from './ExpandableText';
 import { useTranslation } from '@hooks/useTranslation';
 
 const Hero = ({ imageSrc, imageAlt, title, subtitle }) => {
@@ -28,7 +29,7 @@ const Hero = ({ imageSrc, imageAlt, title, subtitle }) => {
       <PlantOverlay position="bottom-left" opacity={0.06} color="text-accent-300" />
       
       {/* Main Content */}
-      <div className="relative z-10 container mx-auto px-8 py-20 min-h-screen flex items-center">
+      <div className="relative z-10 container mx-auto px-8 pt-28 pb-20 md:py-20 min-h-screen flex items-center">
         <div className="grid md:grid-cols-2 gap-12 items-center w-full">
           
           {/* Text Content */}
@@ -43,9 +44,11 @@ const Hero = ({ imageSrc, imageAlt, title, subtitle }) => {
               {title}
             </h1>
             
-            <h2 className="text-xl md:text-2xl text-neutral-700 leading-relaxed">
-              {subtitle}
-            </h2>
+            <ExpandableText maxLines={3}>
+              <h2 className="text-xl md:text-2xl text-neutral-700 leading-relaxed">
+                {subtitle}
+              </h2>
+            </ExpandableText>
             
             <div className="pt-4 flex gap-4 flex-wrap">
               <Link 
@@ -56,7 +59,7 @@ const Hero = ({ imageSrc, imageAlt, title, subtitle }) => {
                 <span className="ml-2 inline-block group-hover:translate-x-1 transition-transform">→</span>
               </Link>
               <Link 
-                to="/contact" 
+                to="/contact#contact-form" 
                 className="px-8 py-4 bg-white text-primary-600 rounded-full font-medium hover:bg-primary-50 transition-all duration-300 shadow-md hover:shadow-lg border-2 border-primary-200"
               >
                 {t('hero.buttons.contact')}
@@ -75,9 +78,9 @@ const Hero = ({ imageSrc, imageAlt, title, subtitle }) => {
               {/* Bild mit organischem Clip-Path */}
               <div className="relative overflow-hidden rounded-organic shadow-2xl">
                 <div className="aspect-square">
-                  <img 
-                    src={imageSrc} 
-                    alt={imageAlt} 
+      <img 
+        src={imageSrc} 
+        alt={imageAlt} 
                     className="w-full h-full object-cover scale-125 hover:scale-130 transition-transform duration-700"
                     style={{
                       clipPath: 'polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)'

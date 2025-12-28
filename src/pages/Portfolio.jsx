@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useTranslation } from "@hooks/useTranslation";
 import PlantOverlay from "@components/PlantOverlay";
 import OrganicShape from "@components/OrganicShape";
+import ExpandableText from "@components/ExpandableText";
 
 const Portfolio = () => {
   const { t } = useTranslation();
@@ -294,11 +296,13 @@ const Portfolio = () => {
           <h1 className="text-5xl md:text-6xl font-display font-bold text-neutral-900 mb-6">
             {t('pages.portfolio.title')}
           </h1>
-          <div className="prose prose-lg max-w-none">
+        <div className="prose prose-lg max-w-none">
+          <ExpandableText maxLines={3}>
             <p className="text-xl text-neutral-700 max-w-3xl mx-auto leading-relaxed">
               {t('pages.portfolio.content')}
             </p>
-          </div>
+          </ExpandableText>
+        </div>
           <div className="w-24 h-1 bg-gradient-to-r from-primary-400 to-accent-400 mx-auto rounded-full mt-6"></div>
         </div>
         
@@ -353,9 +357,11 @@ const Portfolio = () => {
               
               {/* Content */}
               <div className={`p-6 ${item.id === 6 ? 'bg-yellow-50/50' : ''}`}>
-                <p className={`leading-relaxed mb-4 ${item.id === 6 ? 'text-neutral-800' : 'text-neutral-700'}`}>
-                  {item.shortDesc}
-                </p>
+                <ExpandableText maxLines={3}>
+                  <p className={`leading-relaxed mb-4 break-words ${item.id === 6 ? 'text-neutral-800' : 'text-neutral-700'}`}>
+                    {item.shortDesc}
+                  </p>
+                </ExpandableText>
                 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -382,7 +388,7 @@ const Portfolio = () => {
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`inline-flex items-center gap-2 px-4 py-2 text-white rounded-full text-sm font-medium transition-all hover:scale-105 shadow-md hover:shadow-lg ${
+                        className={`inline-flex items-center gap-2 px-4 py-2 text-white rounded-full text-sm font-medium transition-all hover:scale-105 shadow-md hover:shadow-lg break-all ${
                           item.id === 6 
                             ? 'bg-yellow-500 hover:bg-yellow-600' 
                             : 'bg-primary-500 hover:bg-primary-600'
@@ -413,8 +419,8 @@ const Portfolio = () => {
                       }`}>
                         <span className="text-2xl">{detail.icon}</span>
                         <div>
-                          <h5 className="font-bold text-neutral-900 mb-1">{detail.title}</h5>
-                          <p className={`text-sm ${
+                          <h5 className="font-bold text-neutral-900 mb-1 break-words">{detail.title}</h5>
+                          <p className={`text-sm break-words ${
                             item.id === 6 ? 'text-neutral-800' : 'text-neutral-700'
                           }`}>{detail.desc}</p>
                         </div>
@@ -439,10 +445,12 @@ const Portfolio = () => {
           <div className="relative z-10">
             <span className="text-6xl mb-4 inline-block animate-bounce">🚀</span>
             <h3 className="text-3xl font-bold text-neutral-900 mb-4">Weitere Projekte kommen bald!</h3>
-            <p className="text-lg text-neutral-700 max-w-2xl mx-auto">
-              Aktuell bin ich noch fleißig am Studium und arbeite an verschiedenen spannenden Projekten. 
-              Aber keine Sorge – es wachsen hier bald mehr Arbeiten als Monstera-Blätter! 🌿
-            </p>
+            <ExpandableText maxLines={3}>
+              <p className="text-lg text-neutral-700 max-w-2xl mx-auto break-words">
+                Aktuell bin ich noch fleißig am Studium und arbeite an verschiedenen spannenden Projekten. 
+                Aber keine Sorge – es wachsen hier bald mehr Arbeiten als Monstera-Blätter! 🌿
+              </p>
+            </ExpandableText>
           </div>
         </div>
         
@@ -451,14 +459,14 @@ const Portfolio = () => {
           <p className="text-lg text-neutral-700 mb-6">
             Fragen zu meinen Projekten?
           </p>
-          <a 
-            href="/contact" 
+          <Link 
+            to="/contact#contact-form" 
             className="inline-block px-8 py-4 bg-gradient-to-r from-primary-500 to-accent-500 text-white font-bold rounded-full hover:from-primary-600 hover:to-accent-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
           >
             Melde dich gerne! 💬
-          </a>
+          </Link>
         </div>
-      </article>
+    </article>
       
       {/* Easter Egg: Floating plant bottom right */}
       <div className="fixed bottom-8 right-8 w-20 h-20 text-primary-400 opacity-30 hover:opacity-100 hover:scale-125 transition-all duration-300 cursor-pointer animate-float z-50"

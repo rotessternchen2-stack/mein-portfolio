@@ -4,6 +4,7 @@ import InputField from "@components/InputField";
 import PrimaryButton from "@components/PrimaryButton";
 import PlantOverlay from "@components/PlantOverlay";
 import OrganicShape from "@components/OrganicShape";
+import ExpandableText from "@components/ExpandableText";
 import { sendContactMessage } from "@/services/emailService";
 
 const Contact = () => {
@@ -121,7 +122,7 @@ const Contact = () => {
         subject: sanitizedData.subject, // Betreff mitgeben!
         message: sanitizedData.message
       });
-
+      
       setSubmitStatus('success');
       setSubmitCount(prev => prev + 1);
       setLastSubmitTime(now);
@@ -180,7 +181,9 @@ const Contact = () => {
           <h1 className="text-5xl md:text-6xl font-display font-bold text-neutral-900 mb-4">
             {t('contact.title')}
           </h1>
-          <p className="text-xl text-neutral-700 max-w-2xl mx-auto">{t('contact.description')}</p>
+          <ExpandableText maxLines={3}>
+            <p className="text-xl text-neutral-700 max-w-2xl mx-auto">{t('contact.description')}</p>
+          </ExpandableText>
         </div>
         
         <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -197,9 +200,11 @@ const Contact = () => {
                   <span className="text-2xl">🎨</span>
                   <div>
                     <p className="text-sm font-bold text-primary-700 mb-1">Kreativ & Strategisch</p>
-                    <p className="text-sm text-neutral-700">
-                      Ich verbinde kreatives Design mit strategischem Denken für Lösungen, die funktionieren.
-                    </p>
+                    <ExpandableText maxLines={3}>
+                      <p className="text-sm text-neutral-700 break-words">
+                        Ich verbinde kreatives Design mit strategischem Denken für Lösungen, die funktionieren.
+                      </p>
+                    </ExpandableText>
                   </div>
                 </div>
                 
@@ -207,9 +212,11 @@ const Contact = () => {
                   <span className="text-2xl">🚀</span>
                   <div>
                     <p className="text-sm font-bold text-primary-700 mb-1">Vielseitig</p>
-                    <p className="text-sm text-neutral-700">
-                      Von UX/UI über Frontend bis Social Media – ich decke verschiedene Bereiche ab.
-                    </p>
+                    <ExpandableText maxLines={3}>
+                      <p className="text-sm text-neutral-700 break-words">
+                        Von UX/UI über Frontend bis Social Media – ich decke verschiedene Bereiche ab.
+                      </p>
+                    </ExpandableText>
                   </div>
                 </div>
                 
@@ -217,9 +224,11 @@ const Contact = () => {
                   <span className="text-2xl">💡</span>
                   <div>
                     <p className="text-sm font-bold text-primary-700 mb-1">Nutzerorientiert</p>
-                    <p className="text-sm text-neutral-700">
-                      Der User steht im Mittelpunkt – schönes Design, das auch funktioniert.
-                    </p>
+                    <ExpandableText maxLines={3}>
+                      <p className="text-sm text-neutral-700 break-words">
+                        Der User steht im Mittelpunkt – schönes Design, das auch funktioniert.
+                      </p>
+                    </ExpandableText>
                   </div>
                 </div>
                 
@@ -241,17 +250,19 @@ const Contact = () => {
                 <span className="text-3xl animate-float">✂️</span>
                 <div>
                   <p className="text-sm font-bold text-primary-700 mb-2">💡 Fun Fact:</p>
-                  <p className="text-sm text-neutral-700">
-                    Als Hundefriseurin habe ich gelernt: Geduld, Präzision und ein Auge fürs Detail sind 
-                    das A und O – genau wie im Design! Nur dass Stakeholder nicht ganz so kuschelig sind. 😄
-                  </p>
+                  <ExpandableText maxLines={3}>
+                    <p className="text-sm text-neutral-700 break-words">
+                      Als Hundefriseurin habe ich gelernt: Geduld, Präzision und ein Auge fürs Detail sind 
+                      das A und O – genau wie im Design! Nur dass Stakeholder nicht ganz so kuschelig sind. 😄
+                    </p>
+                  </ExpandableText>
                 </div>
               </div>
             </div>
           </div>
           
           {/* Contact Form */}
-          <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-primary-100 relative overflow-hidden">
+          <div id="contact-form" className="bg-white rounded-3xl p-8 shadow-xl border-2 border-primary-100 relative overflow-hidden scroll-mt-24">
             {/* Organischer Hintergrund */}
             <div className="absolute -top-10 -right-10 w-40 h-40 text-primary-100 opacity-50 pointer-events-none">
               <OrganicShape variant="blob3" className="w-full h-full" animate={false} />

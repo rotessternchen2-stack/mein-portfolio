@@ -1,4 +1,5 @@
 import { useTranslation } from "@hooks/useTranslation";
+import { Link } from "react-router-dom";
 import OrganicShape from "@components/OrganicShape";
 import PlantOverlay from "@components/PlantOverlay";
 
@@ -25,7 +26,7 @@ const Impressum = () => {
             
             <section>
               <h2 className="text-2xl font-bold text-primary-700 mb-4">Angaben gemäß § 5 TMG</h2>
-              <p className="leading-relaxed">
+              <p className="leading-relaxed break-words">
                 Maria Wallberg<br />
                 Deutschland
               </p>
@@ -33,7 +34,7 @@ const Impressum = () => {
 
             <section>
               <h2 className="text-2xl font-bold text-primary-700 mb-4">Kontakt</h2>
-              <p className="leading-relaxed">
+              <p className="leading-relaxed break-words">
                 E-Mail: maria.wallberg04@gmail.com
               </p>
               <p className="text-sm text-neutral-600 mt-3">
@@ -80,7 +81,7 @@ const Impressum = () => {
               <p className="leading-relaxed">
                 Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: 
                 <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" 
-                   className="text-primary-600 hover:text-primary-700 underline ml-1">
+                   className="text-primary-600 hover:text-primary-700 underline ml-1 break-all">
                   https://ec.europa.eu/consumers/odr
                 </a>
               </p>
@@ -91,12 +92,12 @@ const Impressum = () => {
 
         {/* Zurück-Button */}
         <div className="text-center mt-12">
-          <a 
-            href="/" 
+          <Link 
+            to="/" 
             className="inline-block px-8 py-4 bg-gradient-to-r from-primary-500 to-accent-500 text-white font-bold rounded-full hover:from-primary-600 hover:to-accent-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
           >
             ← Zurück zur Startseite
-          </a>
+          </Link>
         </div>
       </div>
     </div>

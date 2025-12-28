@@ -30,7 +30,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-neutral-700 hover:text-primary-600 transition-colors">
+                <Link to="/contact#contact-form" className="text-neutral-700 hover:text-primary-600 transition-colors">
                   {t('footer.contact')}
                 </Link>
               </li>
@@ -88,11 +88,11 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-primary-200 pt-8 text-center">
           <p className="text-sm text-neutral-700">
-            {t('footer.copyright').replace('{year}', currentYear)}
-          </p>
+          {t('footer.copyright').replace('{year}', currentYear)}
+        </p>
           <p className="text-xs mt-2 text-neutral-600">
-            {t('footer.tagline')}
-          </p>
+          {t('footer.tagline')}
+        </p>
         </div>
       </div>
     </footer>

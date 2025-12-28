@@ -3,6 +3,7 @@ import Timeline from "@components/Timeline";
 import OrganicShape from "@components/OrganicShape";
 import PlantOverlay from "@components/PlantOverlay";
 import QRCode from "@components/QRCode";
+import ExpandableText from "@components/ExpandableText";
 
 const About = () => {
   const { t } = useTranslation();
@@ -83,9 +84,11 @@ const About = () => {
             {t('pages.about.title')}
           </h1>
           <div className="max-w-3xl mx-auto">
-            <p className="text-xl text-neutral-700 leading-relaxed whitespace-pre-line">
-              {t('pages.about.content').split('\n\n')[0]}
-            </p>
+            <ExpandableText maxLines={4}>
+              <p className="text-xl text-neutral-700 leading-relaxed whitespace-pre-line">
+                {t('pages.about.content').split('\n\n')[0]}
+              </p>
+            </ExpandableText>
           </div>
         </div>
       </div>
@@ -248,82 +251,96 @@ const About = () => {
             <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-primary-200 hover:border-primary-400 hover:-translate-y-2 group">
               <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">🌿</div>
               <h3 className="text-xl font-bold text-primary-700 mb-3">Plant Mom</h3>
-              <p className="text-neutral-700 text-sm leading-relaxed">
-                Von "Ich habe keinen grünen Daumen" zu einem kleinen Dschungel in der Wohnung. 
-                <span className="block mt-2 text-primary-600 font-medium">
-                  → Wie in der Natur wachse ich auch an Herausforderungen – mit Geduld und der richtigen Pflege entstehen die schönsten Projekte! 🌱
-                </span>
-              </p>
+              <ExpandableText maxLines={4}>
+                <p className="text-neutral-700 text-sm leading-relaxed break-words">
+                  Von "Ich habe keinen grünen Daumen" zu einem kleinen Dschungel in der Wohnung. 
+                  <span className="block mt-2 text-primary-600 font-medium break-words">
+                    → Wie in der Natur wachse ich auch an Herausforderungen – mit Geduld und der richtigen Pflege entstehen die schönsten Projekte! 🌱
+                  </span>
+                </p>
+              </ExpandableText>
             </div>
 
             {/* Backen */}
             <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-accent-200 hover:border-accent-400 hover:-translate-y-2 group">
               <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">🍰</div>
               <h3 className="text-xl font-bold text-accent-700 mb-3">Freestyle Bäckerin</h3>
-              <p className="text-neutral-700 text-sm leading-relaxed">
-                Backen ohne Rezept (außer bei San Sebastián Cheesecake & Macarons – da bin ich dann doch lieber präzise). 
-                <span className="block mt-2 text-accent-600 font-medium">
-                  → Kreativität meets Präzision – genau wie im Design, wo ich weiß, wann ich experimentieren und wann ich mich an Guidelines halten muss! 🎯
-                </span>
-              </p>
+              <ExpandableText maxLines={4}>
+                <p className="text-neutral-700 text-sm leading-relaxed break-words">
+                  Backen ohne Rezept (außer bei San Sebastián Cheesecake & Macarons – da bin ich dann doch lieber präzise). 
+                  <span className="block mt-2 text-accent-600 font-medium break-words">
+                    → Kreativität meets Präzision – genau wie im Design, wo ich weiß, wann ich experimentieren und wann ich mich an Guidelines halten muss! 🎯
+                  </span>
+                </p>
+              </ExpandableText>
             </div>
 
             {/* Kochen */}
             <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-primary-200 hover:border-primary-400 hover:-translate-y-2 group">
               <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">🍳</div>
               <h3 className="text-xl font-bold text-primary-700 mb-3">Experimentierfreudige Köchin</h3>
-              <p className="text-neutral-700 text-sm leading-relaxed">
-                Kochen ohne Rezept und die perfekte Balance zwischen süß & herzhaft finden. 
-                <span className="block mt-2 text-primary-600 font-medium">
-                  → Wie beim UX-Design: Die richtige Balance von Elementen macht's – nicht zu viel, nicht zu wenig! ⚖️
-                </span>
-              </p>
+              <ExpandableText maxLines={4}>
+                <p className="text-neutral-700 text-sm leading-relaxed break-words">
+                  Kochen ohne Rezept und die perfekte Balance zwischen süß & herzhaft finden. 
+                  <span className="block mt-2 text-primary-600 font-medium break-words">
+                    → Wie beim UX-Design: Die richtige Balance von Elementen macht's – nicht zu viel, nicht zu wenig! ⚖️
+                  </span>
+                </p>
+              </ExpandableText>
             </div>
 
             {/* Hunde */}
             <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-accent-200 hover:border-accent-400 hover:-translate-y-2 group">
               <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">🐕</div>
               <h3 className="text-xl font-bold text-accent-700 mb-3">Hundeliebhaberin mit Leidenschaft</h3>
-              <p className="text-neutral-700 text-sm leading-relaxed">
-                Vom Hundesitting zur Hundefriseur-Ausbildung – wenn ich etwas liebe, gehe ich all-in. 
-                <span className="block mt-2 text-accent-600 font-medium">
-                  → Detail-Arbeit, Geduld & mit schwierigen "Kunden" umgehen – Skills, die ich täglich in Projekten brauche! 💼
-                </span>
-              </p>
+              <ExpandableText maxLines={4}>
+                <p className="text-neutral-700 text-sm leading-relaxed break-words">
+                  Vom Hundesitting zur Hundefriseur-Ausbildung – wenn ich etwas liebe, gehe ich all-in. 
+                  <span className="block mt-2 text-accent-600 font-medium break-words">
+                    → Detail-Arbeit, Geduld & mit schwierigen "Kunden" umgehen – Skills, die ich täglich in Projekten brauche! 💼
+                  </span>
+                </p>
+              </ExpandableText>
             </div>
 
             {/* Tanzen */}
             <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-primary-200 hover:border-primary-400 hover:-translate-y-2 group">
               <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">💃</div>
               <h3 className="text-xl font-bold text-primary-700 mb-3">Tänzerin seit Tag 1</h3>
-              <p className="text-neutral-700 text-sm leading-relaxed">
-                Seit ich 9 bin (mit 4 Jahren Pause) – jetzt wieder voll dabei mit Wettkämpfen & Auftritten. 
-                <span className="block mt-2 text-primary-600 font-medium">
-                  → Rhythmus, Timing & Performance unter Druck – wie bei Deadlines, nur mit mehr Choreografie! 🎭
-                </span>
-              </p>
+              <ExpandableText maxLines={4}>
+                <p className="text-neutral-700 text-sm leading-relaxed break-words">
+                  Seit ich 9 bin (mit 4 Jahren Pause) – jetzt wieder voll dabei mit Wettkämpfen & Auftritten. 
+                  <span className="block mt-2 text-primary-600 font-medium break-words">
+                    → Rhythmus, Timing & Performance unter Druck – wie bei Deadlines, nur mit mehr Choreografie! 🎭
+                  </span>
+                </p>
+              </ExpandableText>
             </div>
 
             {/* Volleyball */}
             <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-accent-200 hover:border-accent-400 hover:-translate-y-2 group">
               <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">🏐</div>
               <h3 className="text-xl font-bold text-accent-700 mb-3">Teamplayerin</h3>
-              <p className="text-neutral-700 text-sm leading-relaxed">
-                Volleyball lehrt mich, dass Erfolg nur im Team funktioniert – jeder hat seine Rolle. 
-                <span className="block mt-2 text-accent-600 font-medium">
-                  → Im Design genauso: Designer, Developer, PMs – nur gemeinsam entstehen großartige Projekte! 🤝
-                </span>
-              </p>
+              <ExpandableText maxLines={4}>
+                <p className="text-neutral-700 text-sm leading-relaxed break-words">
+                  Volleyball lehrt mich, dass Erfolg nur im Team funktioniert – jeder hat seine Rolle. 
+                  <span className="block mt-2 text-accent-600 font-medium break-words">
+                    → Im Design genauso: Designer, Developer, PMs – nur gemeinsam entstehen großartige Projekte! 🤝
+                  </span>
+                </p>
+              </ExpandableText>
             </div>
           </div>
 
           {/* Fun Easter Egg */}
           <div className="mt-12 text-center">
             <div className="inline-block bg-gradient-to-r from-primary-100 to-accent-100 rounded-full px-6 py-3 border-2 border-primary-300 shadow-md">
-              <p className="text-sm text-neutral-800 font-medium">
-                💡 <span className="italic">Design-Tipp:</span> Die besten Ideen entstehen außerhalb des Bildschirms – 
-                beim Backen, Tanzen oder mit meinen Pflanzen! 🌿✨
-              </p>
+              <ExpandableText maxLines={2}>
+                <p className="text-sm text-neutral-800 font-medium">
+                  💡 <span className="italic">Design-Tipp:</span> Die besten Ideen entstehen außerhalb des Bildschirms – 
+                  beim Backen, Tanzen oder mit meinen Pflanzen! 🌿✨
+                </p>
+              </ExpandableText>
             </div>
           </div>
         </div>
@@ -336,7 +353,9 @@ const About = () => {
             <h2 className="text-4xl font-display font-bold text-neutral-900 mb-4">
               💼 Mein Werdegang
             </h2>
-            <p className="text-lg text-neutral-600">Von der Schule über's duale Studium bis... zu Hunden? 🐕</p>
+            <ExpandableText maxLines={2}>
+              <p className="text-lg text-neutral-600">Von der Schule über's duale Studium bis... zu Hunden? 🐕</p>
+            </ExpandableText>
           </div>
           <Timeline items={experiences} />
         </div>
@@ -349,7 +368,9 @@ const About = () => {
             <h2 className="text-4xl font-display font-bold text-neutral-900 mb-4">
               🛠️ Skills & Werkzeuge
             </h2>
-            <p className="text-lg text-neutral-600">Womit ich am liebsten arbeite</p>
+            <ExpandableText maxLines={2}>
+              <p className="text-lg text-neutral-600">Womit ich am liebsten arbeite</p>
+            </ExpandableText>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -415,11 +436,13 @@ const About = () => {
           <div className="bg-white/80 backdrop-blur rounded-3xl p-8 shadow-xl border-2 border-primary-200">
             <span className="text-6xl mb-4 inline-block">✨</span>
             <h3 className="text-2xl font-bold text-neutral-900 mb-4">Meine Design-Philosophie</h3>
-            <p className="text-lg text-neutral-700 leading-relaxed">
-              Gutes Design ist wie eine gut gepflegte Pflanze – es braucht Aufmerksamkeit, Geduld und die richtige Balance. 
-              Jedes Projekt ist einzigartig und verdient eine maßgeschneiderte Lösung, die nicht nur schön aussieht, 
-              sondern auch wirklich funktioniert und Mehrwert schafft. 🌿
-            </p>
+            <ExpandableText maxLines={3}>
+              <p className="text-lg text-neutral-700 leading-relaxed break-words">
+                Gutes Design ist wie eine gut gepflegte Pflanze – es braucht Aufmerksamkeit, Geduld und die richtige Balance. 
+                Jedes Projekt ist einzigartig und verdient eine maßgeschneiderte Lösung, die nicht nur schön aussieht, 
+                sondern auch wirklich funktioniert und Mehrwert schafft. 🌿
+              </p>
+            </ExpandableText>
           </div>
         </div>
       </div>

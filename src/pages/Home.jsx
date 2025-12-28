@@ -7,6 +7,7 @@ import ServiceItem from "@components/ServiceItem";
 import PrimaryButton from "@components/PrimaryButton";
 import PlantOverlay from "@components/PlantOverlay";
 import OrganicShape from "@components/OrganicShape";
+import ExpandableText from "@components/ExpandableText";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -41,7 +42,7 @@ const Home = () => {
         <PlantOverlay position="bottom-left" opacity={0.04} color="text-accent-300" />
         
         <div className="mx-8 md:mx-16 py-16 relative z-10">
-          <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           {/* Intro */}
           <div className="relative">
             <div className="absolute -top-20 -left-20 w-32 h-32 text-primary-200 opacity-30 pointer-events-none">
@@ -51,9 +52,13 @@ const Home = () => {
               <div className="absolute -bottom-10 -right-10 w-40 h-40 text-accent-100 opacity-50 pointer-events-none">
                 <OrganicShape variant="blob3" className="w-full h-full" animate={true} />
               </div>
-              <p className="text-xl leading-relaxed text-neutral-800 relative z-10">
-                {t('home.intro')}
-              </p>
+              <div className="relative z-10">
+                <ExpandableText maxLines={4}>
+                  <p className="text-xl leading-relaxed text-neutral-800 break-words">
+                    {t('home.intro')}
+                  </p>
+                </ExpandableText>
+              </div>
             </div>
           </div>
           
@@ -76,11 +81,13 @@ const Home = () => {
                   <h3 className="text-xl font-bold text-neutral-900 mb-3 group-hover:text-primary-600 transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-neutral-700 leading-relaxed">
-                    {service.description}
-                  </p>
+                  <ExpandableText maxLines={3}>
+                    <p className="text-neutral-700 leading-relaxed break-words">
+                      {service.description}
+                    </p>
+                  </ExpandableText>
                 </div>
-              ))}
+            ))}
             </div>
           </div>
           
@@ -101,17 +108,19 @@ const Home = () => {
               </div>
               
               <div className="grid md:grid-cols-3 gap-6 mt-12">
-                {strengths.map((strength) => (
+            {strengths.map((strength) => (
                   <div key={strength.key} 
                        className="bg-white rounded-[2rem] p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-primary-200 hover:border-primary-400">
                     <h3 className="text-2xl font-bold text-primary-700 mb-3">
                       {strength.title}
                     </h3>
-                    <p className="text-neutral-700 leading-relaxed">
-                      {strength.description}
-                    </p>
+                    <ExpandableText maxLines={3}>
+                      <p className="text-neutral-700 leading-relaxed break-words">
+                        {strength.description}
+                      </p>
+                    </ExpandableText>
                   </div>
-                ))}
+            ))}
               </div>
             </div>
           </div>
@@ -120,25 +129,27 @@ const Home = () => {
           <div className="relative text-center py-12">
             <div className="absolute inset-0 bg-gradient-to-r from-primary-100 via-accent-100 to-primary-100 rounded-[3rem] opacity-50"></div>
             <div className="relative z-10 p-12">
-              <h2 className="text-4xl md:text-5xl font-display font-bold text-neutral-900 mb-6">
+              <h2 className="text-4xl md:text-5xl font-display font-bold text-neutral-900 mb-6 break-words">
                 {t('home.cta.title')}
               </h2>
-              <p className="text-xl text-neutral-700 mb-8 max-w-2xl mx-auto">
-                {t('home.cta.description')}
-              </p>
-              <Link to="/contact">
-                <PrimaryButton label={t('home.cta.button')} />
-              </Link>
+              <ExpandableText maxLines={3}>
+                <p className="text-xl text-neutral-700 mb-8 max-w-2xl mx-auto break-words">
+                  {t('home.cta.description')}
+                </p>
+              </ExpandableText>
+            <Link to="/contact#contact-form">
+              <PrimaryButton label={t('home.cta.button')} />
+            </Link>
             </div>
           </div>
           
           {/* Easter Egg: Hidden plant facts */}
           <div className="mt-12 text-center">
             <details className="bg-gradient-to-r from-primary-100 to-accent-100 rounded-[2rem] p-6 cursor-pointer hover:shadow-lg transition-all">
-              <summary className="text-primary-700 font-bold text-lg cursor-pointer">
+              <summary className="text-primary-700 font-bold text-lg cursor-pointer list-none">
                 🌿 Fun Fact: Warum Pflanzen in meinem Design? (Klick mich!)
               </summary>
-              <p className="mt-4 text-neutral-700 leading-relaxed">
+              <p className="mt-4 text-neutral-700 leading-relaxed break-words">
                 Monstera und Alocasia sind nicht nur wunderschön, sondern auch super resilient – 
                 genau wie gutes Design! Sie passen sich an, wachsen in verschiedene Richtungen 
                 und jedes Blatt ist einzigartig. Das erinnert mich daran, dass jedes Projekt 
@@ -147,7 +158,7 @@ const Home = () => {
             </details>
           </div>
         </div>
-      </div>
+        </div>
       </div>
     </>
   );

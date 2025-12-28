@@ -23,7 +23,7 @@ const PrimaryButton = ({
       
       {/* Button text */}
       <span className="relative flex items-center justify-center gap-2">
-        {label}
+      {label}
         <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
       </span>
     </button>

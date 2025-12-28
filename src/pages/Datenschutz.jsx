@@ -1,4 +1,5 @@
 import { useTranslation } from "@hooks/useTranslation";
+import { Link } from "react-router-dom";
 import PlantOverlay from "@components/PlantOverlay";
 
 const Datenschutz = () => {
@@ -61,7 +62,7 @@ const Datenschutz = () => {
               </p>
 
               <h3 className="text-xl font-semibold text-neutral-900 mt-6 mb-3">Hinweis zur verantwortlichen Stelle</h3>
-              <p className="leading-relaxed mb-4">
+              <p className="leading-relaxed mb-4 break-words">
                 Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:<br /><br />
                 Maria Wallberg<br />
                 Deutschland<br /><br />
@@ -120,12 +121,12 @@ const Datenschutz = () => {
 
         {/* Zurück-Button */}
         <div className="text-center mt-12">
-          <a 
-            href="/" 
+          <Link 
+            to="/" 
             className="inline-block px-8 py-4 bg-gradient-to-r from-primary-500 to-accent-500 text-white font-bold rounded-full hover:from-primary-600 hover:to-accent-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
           >
             ← Zurück zur Startseite
-          </a>
+          </Link>
         </div>
       </div>
     </div>

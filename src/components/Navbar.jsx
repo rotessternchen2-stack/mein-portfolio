@@ -46,8 +46,8 @@ const Navbar = () => {
           </Link>
           
           <Link to="/portfolio" className="hover:text-green-700 transition">
-            {t('nav.portfolio')}
-          </Link>
+              {t('nav.portfolio')}
+                  </Link>
 
           <Link to="/" className="flex items-center">
             <img src={logo} alt={t('a11y.logoAlt')} className="max-h-14" />
@@ -69,7 +69,7 @@ const Navbar = () => {
         <div className="flex items-center">
           {/* Desktop */}
           <div className="hidden md:block">
-            <Link to="/contact">
+            <Link to="/contact#contact-form">
               <PrimaryButton label={t('nav.contact')} />
             </Link>
           </div>
@@ -124,7 +124,7 @@ const Navbar = () => {
               {t('nav.portfolio')}
             </Link>
             <Link 
-              to="/contact" 
+              to="/contact#contact-form" 
               className="px-4 py-2 bg-green-900 text-green-200 rounded-lg hover:bg-green-800 transition text-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >
