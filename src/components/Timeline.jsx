@@ -4,11 +4,11 @@ import { useState } from 'react';
 const TimelineItem = ({ date, title, company, description, icon, isLast }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   
-  // Check if description is longer than 3 lines (approximately 250 characters)
-  const isLongText = description.length > 250;
+  // Check if description is longer than 3 lines on mobile (approximately 120 characters)
+  const isLongText = description.length > 120;
   const displayText = isExpanded || !isLongText 
     ? description 
-    : description.substring(0, 250) + '...';
+    : description.substring(0, 120) + '...';
   
   return (
     <div className="relative flex gap-6 pb-12">

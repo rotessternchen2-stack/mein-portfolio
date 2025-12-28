@@ -84,11 +84,9 @@ const About = () => {
             {t('pages.about.title')}
           </h1>
           <div className="max-w-3xl mx-auto">
-            <ExpandableText maxLines={4}>
-              <p className="text-xl text-neutral-700 leading-relaxed whitespace-pre-line">
-                {t('pages.about.content').split('\n\n')[0]}
-              </p>
-            </ExpandableText>
+            <p className="text-xl text-neutral-700 leading-relaxed whitespace-pre-line">
+              {t('pages.about.content').split('\n\n')[0]}
+            </p>
           </div>
         </div>
       </div>
@@ -335,12 +333,10 @@ const About = () => {
           {/* Fun Easter Egg */}
           <div className="mt-12 text-center">
             <div className="inline-block bg-gradient-to-r from-primary-100 to-accent-100 rounded-full px-6 py-3 border-2 border-primary-300 shadow-md">
-              <ExpandableText maxLines={2}>
-                <p className="text-sm text-neutral-800 font-medium">
-                  💡 <span className="italic">Design-Tipp:</span> Die besten Ideen entstehen außerhalb des Bildschirms – 
-                  beim Backen, Tanzen oder mit meinen Pflanzen! 🌿✨
-                </p>
-              </ExpandableText>
+              <p className="text-sm text-neutral-800 font-medium">
+                💡 <span className="italic">Design-Tipp:</span> Die besten Ideen entstehen außerhalb des Bildschirms – 
+                beim Backen, Tanzen oder mit meinen Pflanzen! 🌿✨
+              </p>
             </div>
           </div>
         </div>
@@ -353,9 +349,7 @@ const About = () => {
             <h2 className="text-4xl font-display font-bold text-neutral-900 mb-4">
               💼 Mein Werdegang
             </h2>
-            <ExpandableText maxLines={2}>
-              <p className="text-lg text-neutral-600">Von der Schule über's duale Studium bis... zu Hunden? 🐕</p>
-            </ExpandableText>
+            <p className="text-lg text-neutral-600">Von der Schule über's duale Studium bis... zu Hunden? 🐕</p>
           </div>
           <Timeline items={experiences} />
         </div>
@@ -368,9 +362,7 @@ const About = () => {
             <h2 className="text-4xl font-display font-bold text-neutral-900 mb-4">
               🛠️ Skills & Werkzeuge
             </h2>
-            <ExpandableText maxLines={2}>
-              <p className="text-lg text-neutral-600">Womit ich am liebsten arbeite</p>
-            </ExpandableText>
+            <p className="text-lg text-neutral-600">Womit ich am liebsten arbeite</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

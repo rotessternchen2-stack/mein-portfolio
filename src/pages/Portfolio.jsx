@@ -357,11 +357,9 @@ const Portfolio = () => {
               
               {/* Content */}
               <div className={`p-6 ${item.id === 6 ? 'bg-yellow-50/50' : ''}`}>
-                <ExpandableText maxLines={3}>
-                  <p className={`leading-relaxed mb-4 break-words ${item.id === 6 ? 'text-neutral-800' : 'text-neutral-700'}`}>
-                    {item.shortDesc}
-                  </p>
-                </ExpandableText>
+                <p className={`leading-relaxed mb-4 break-words ${item.id === 6 ? 'text-neutral-800' : 'text-neutral-700'}`}>
+                  {item.shortDesc}
+                </p>
                 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
