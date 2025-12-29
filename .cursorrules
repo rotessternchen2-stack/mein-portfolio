@@ -74,12 +74,36 @@ import mariaHero from "@assets/maria-hero.png";
 
 ## 🌐 Internationalisierung
 
+### ⚠️ WICHTIG: Keine Plain-Text-Strings im Code!
+
+- **ALLE Texte müssen in Übersetzungsdateien** (`src/translations/`) liegen
+- **NIEMALS** hardcodierte deutsche oder englische Texte direkt in Komponenten schreiben
+- **Immer** `t('translation.key')` verwenden für jeglichen sichtbaren Text
+- **Ausnahme**: Nur dynamische Werte (z.B. API-Responses, User-Input)
+
+**Beispiele:**
+
+❌ **FALSCH:**
+
+```jsx
+<h1>Willkommen auf meiner Website</h1>
+<button>Mehr erfahren</button>
+```
+
+✅ **RICHTIG:**
+
+```jsx
+<h1>{t('pages.home.welcome')}</h1>
+<button>{t('common.buttons.learnMore')}</button>
+```
+
 ### Translation Keys
 
 - Immer strukturiert: `category.subcategory.key`
 - Beispiel: `hero.buttons.portfolio`, `contact.form.name.placeholder`
 - **Du-Form** für deutsche Texte (nie "Sie")
 - Konsistente Emojis: 🌿 für Natur, 🐕 für Hunde, ✨ für Highlights
+- **Typografische Anführungszeichen vermeiden**: Nutze `"` statt `„"` oder `""` in JSON/JS-Dateien
 
 ### Tone of Voice
 
@@ -192,7 +216,9 @@ src/
 - [ ] Alle Importe vollständig?
 - [ ] PropTypes definiert?
 - [ ] Tailwind Classes korrekt?
+- [ ] **Alle Texte in Übersetzungsdateien (keine Plain-Text-Strings im Code)?**
 - [ ] Translations aktualisiert (DE + EN)?
+- [ ] Keine typografischen Anführungszeichen („") in Translation-Dateien?
 - [ ] Keine `.md` Dateien erstellt?
 - [ ] `.env` nicht committet?
 - [ ] Linter-Errors gefixt?

@@ -27,12 +27,11 @@ const NotFound = () => {
         </div>
 
         <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-4">
-          Oops! Diese Seite gibt es nicht 🌿
+          {t('pages.notFound.title')}
         </h2>
         
         <p className="text-xl text-neutral-700 mb-8 max-w-lg mx-auto">
-          Es scheint, als hättest du dich in meinem Portfolio verlaufen. 
-          Aber keine Sorge – wie bei Monstera-Pflanzen wachsen hier ständig neue Wege!
+          {t('pages.notFound.description')}
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -40,26 +39,26 @@ const NotFound = () => {
             to="/"
             className="inline-block px-8 py-4 bg-gradient-to-r from-primary-500 to-accent-500 text-white font-bold rounded-full hover:from-primary-600 hover:to-accent-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
           >
-            🏠 Zurück zur Startseite
+            {t('pages.notFound.homeButton')}
           </Link>
           
           <Link 
             to="/portfolio"
             className="inline-block px-8 py-4 bg-white text-primary-700 font-bold rounded-full hover:bg-primary-50 transition-all duration-300 shadow-md hover:shadow-lg border-2 border-primary-300"
           >
-            💼 Zum Portfolio
+            {t('pages.notFound.portfolioButton')}
           </Link>
         </div>
 
         {/* Easter Egg */}
         <div className="mt-12 text-sm text-neutral-600 italic">
-          <p>💡 Fun Fact: Selbst ein 404-Fehler kann schön aussehen!</p>
+          <p>{t('pages.notFound.easterEgg')}</p>
         </div>
       </div>
 
       {/* Floating plant decoration */}
       <div className="absolute bottom-8 left-8 w-20 h-20 text-primary-400 opacity-30 hover:opacity-100 hover:scale-125 transition-all duration-300 cursor-pointer animate-float-slow"
-           title="🌿 Easter Egg: Auch Fehlerseiten verdienen Design!">
+           title={t('pages.about.easterEggTooltip')}>
         <OrganicShape variant="monsteraLeaf" className="w-full h-full hover:animate-wiggle" />
       </div>
     </div>

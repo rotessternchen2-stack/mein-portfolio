@@ -69,7 +69,7 @@ const Navbar = () => {
         <div className="flex items-center">
           {/* Desktop */}
           <div className="hidden md:block">
-            <Link to="/contact#contact-form">
+            <Link to="/contact">
               <PrimaryButton label={t('nav.contact')} />
             </Link>
           </div>
@@ -124,7 +124,7 @@ const Navbar = () => {
               {t('nav.portfolio')}
             </Link>
             <Link 
-              to="/contact#contact-form" 
+              to="/contact" 
               className="px-4 py-2 bg-green-900 text-green-200 rounded-lg hover:bg-green-800 transition text-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >

@@ -30,7 +30,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/contact#contact-form" className="text-neutral-700 hover:text-primary-600 transition-colors">
+                <Link to="/contact" className="text-neutral-700 hover:text-primary-600 transition-colors">
                   {t('footer.contact')}
                 </Link>
               </li>

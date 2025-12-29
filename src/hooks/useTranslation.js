@@ -4,7 +4,7 @@ import { useLanguage } from '@contexts/LanguageContext';
 export const useTranslation = () => {
   const { language, setLanguage } = useLanguage();
 
-  const t = (key) => {
+  const t = (key, options = {}) => {
     const keys = key.split('.');
     let value = translations[language]; 
     
@@ -13,18 +13,26 @@ export const useTranslation = () => {
         value = value[k];
       } else {
         console.warn(`Translation key not found: ${key}`);
-        return key; 
+        return options.returnObjects ? undefined : key; 
       }
     }
     
+    // Wenn returnObjects: true, gib das Objekt/Array zurück
+    if (options.returnObjects) {
+      return value;
+    }
+    
+    // Sonst nur Strings zurückgeben
     return typeof value === 'string' ? value : key;
   };
 
   return {
     t,
+    language,
     currentLanguage: language,
     changeLanguage: setLanguage,
     availableLanguages: Object.keys(translations)
   };
 };
 console.log('Translations:', translations);
+

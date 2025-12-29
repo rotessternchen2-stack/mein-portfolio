@@ -4,6 +4,8 @@ import { accessibilityTranslations } from '@translations/accessibility';
 import { pagesTranslations } from '@translations/pages';
 import { footerTranslations } from '@translations/footer';
 import { contactTranslations } from '@translations/contact';
+import { portfolioTranslations } from '@translations/portfolio';
+import { legalTranslations } from '@translations/legal';
 
 export const translations = {
   de: {
@@ -13,12 +15,15 @@ export const translations = {
       intro: homeTranslations.de.intro,
       whatIDo: homeTranslations.de.whatIDo,
       whyMe: homeTranslations.de.whyMe,
-      cta: homeTranslations.de.cta
+      cta: homeTranslations.de.cta,
+      easterEgg: homeTranslations.de.easterEgg
     },
     pages: pagesTranslations.de,
+    portfolio: portfolioTranslations.de,
     contact: contactTranslations.de,
     footer: footerTranslations.de,
-    a11y: accessibilityTranslations.de
+    a11y: accessibilityTranslations.de,
+    legal: legalTranslations.de
   },
   en: {
     nav: navTranslations.en,
@@ -27,11 +32,14 @@ export const translations = {
       intro: homeTranslations.en.intro,
       whatIDo: homeTranslations.en.whatIDo,
       whyMe: homeTranslations.en.whyMe,
-      cta: homeTranslations.en.cta
+      cta: homeTranslations.en.cta,
+      easterEgg: homeTranslations.en.easterEgg
     },
     pages: pagesTranslations.en,
+    portfolio: portfolioTranslations.en,
     contact: contactTranslations.en,
     footer: footerTranslations.en,
-    a11y: accessibilityTranslations.en
+    a11y: accessibilityTranslations.en,
+    legal: legalTranslations.en
   }
 };

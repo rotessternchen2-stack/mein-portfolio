@@ -1,9 +1,7 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { useTranslation } from "@hooks/useTranslation";
 import PlantOverlay from "@components/PlantOverlay";
 import OrganicShape from "@components/OrganicShape";
-import ExpandableText from "@components/ExpandableText";
 
 const Portfolio = () => {
   const { t } = useTranslation();
@@ -12,266 +10,89 @@ const Portfolio = () => {
   const toggleDropdown = (id) => {
     setOpenDropdownId(prevId => prevId === id ? null : id);
   };
-  
-  const portfolioItems = [
+
+  // Portfolio Items mit Übersetzungen
+  const portfolioItemsData = [
     {
       id: 1,
-      title: "Check24",
-      category: "Web Design & Frontend Development",
-      description: "Duale Studentin im Bereich Mediendesign",
-      shortDesc: "CD-konforme Web- und App-Designs, Logo-Entwicklung, Frontend mit React & Tailwind",
+      key: "check24",
       tags: ["React", "Tailwind", "UI/UX", "Corporate Design"],
       color: "from-primary-400 to-primary-600",
       icon: "🌐",
-      details: [
-        {
-          title: "Frontend-Entwicklung",
-          desc: "Entwicklung von React-Komponenten mit Tailwind CSS für interne Tools",
-          icon: "💻"
-        },
-        {
-          title: "Corporate Design",
-          desc: "Einhaltung und Umsetzung der CD-Guidelines auf Web & App",
-          icon: "🎨"
-        },
-        {
-          title: "Projektmanagement",
-          desc: "Einblick in PM-Prozesse und Projektabläufe – von Planung bis Umsetzung",
-          icon: "📋"
-        },
-        {
-          title: "Logo & Medienentwicklung",
-          desc: "Gestaltung von Logos und Print-/Webmedien für interne Nutzung",
-          icon: "✨"
-        }
-      ]
+      detailsKeys: ["frontend", "cd", "pm", "logo"],
+      detailsIcons: ["💻", "🎨", "📋", "✨"]
     },
     {
       id: 2,
-      title: "KulturLeben Leipzig & Region",
-      category: "Social Media Management",
-      description: "Content-Erstellung und Community Management",
-      shortDesc: "Social Media Management, Content-Erstellung, Messestandbetreuung",
+      key: "kulturleben",
       tags: ["Social Media", "Content Creation", "Branding"],
       color: "from-accent-400 to-accent-600",
       icon: "📱",
       links: [
-        {
-          title: "Instagram",
-          url: "https://www.instagram.com/kulturleben_leipzig/",
-          icon: "📸"
-        }
+        { key: "instagram", url: "https://www.instagram.com/kulturleben_leipzig/", icon: "📸" }
       ],
-      details: [
-        {
-          title: "Social Media Management",
-          desc: "Betreuung der Social-Media-Kanäle, Planung und Umsetzung von Content-Strategien",
-          icon: "📱"
-        },
-        {
-          title: "Content-Erstellung",
-          desc: "Grafiken, Posts und Stories für Instagram und Facebook",
-          icon: "✨"
-        },
-        {
-          title: "Template-Erstellung",
-          desc: "Erstellung von wiederverwendbaren Instagram-Templates für einheitliches Branding",
-          icon: "🎨"
-        },
-        {
-          title: "Messestandbetreuung",
-          desc: "Repräsentation auf Messen und Events, Marketing-Material",
-          icon: "🎪"
-        }
-      ]
+      detailsKeys: ["socialMedia", "content", "templates", "booth"],
+      detailsIcons: ["📱", "✨", "🎨", "🎪"]
     },
     {
       id: 3,
-      title: "Leadfluss",
-      category: "Grafikdesign & Social Media",
-      description: "Praktikum im Bereich Kreativgestaltung",
-      shortDesc: "Grafikdesign, Social Media Management, Content-Strategie",
+      key: "leadfluss",
       tags: ["Grafikdesign", "Social Media", "Marketing"],
       color: "from-primary-500 to-accent-500",
       icon: "🎨",
       links: [
-        {
-          title: "Website",
-          url: "https://www.leadfluss.de/",
-          icon: "🌐"
-        },
-        {
-          title: "Instagram",
-          url: "https://www.instagram.com/leadfluss.de/",
-          icon: "📸"
-        }
+        { key: "website", url: "https://www.leadfluss.de/", icon: "🌐" },
+        { key: "instagram", url: "https://www.instagram.com/leadfluss.de/", icon: "📸" }
       ],
-      details: [
-        {
-          title: "Grafikdesign",
-          desc: "Erstellung von Grafiken, Flyern und Werbematerial mit Adobe Creative Suite",
-          icon: "🎨"
-        },
-        {
-          title: "Merch-Design",
-          desc: "Konzeption und Gestaltung von Merchandise-Produkten für das Branding",
-          icon: "👕"
-        },
-        {
-          title: "Druckvorstufe mit InDesign",
-          desc: "Professionelle Print-Projekte mit korrektem Anschnitt, Farbprofilen und druckfertigen Dateien",
-          icon: "📄"
-        },
-        {
-          title: "Social Media Management",
-          desc: "Content-Planung und Umsetzung für verschiedene Kanäle",
-          icon: "📱"
-        },
-        {
-          title: "Kreative Kampagnen",
-          desc: "Entwicklung und Umsetzung von Marketing-Kampagnen",
-          icon: "💡"
-        }
-      ]
+      detailsKeys: ["graphic", "merch", "print", "socialMedia", "campaigns"],
+      detailsIcons: ["🎨", "👕", "📄", "📱", "💡"]
     },
     {
       id: 4,
-      title: "Fürstenschnitt - Fürstenpfote",
-      category: "Social Media & Grooming",
-      description: "Hundefriseurin & Content Creator",
-      shortDesc: "Hundefrisieren, Social Media Content, Video-Produktion",
+      key: "fuerstenpfote",
       tags: ["Social Media", "Video", "Grooming"],
       color: "from-accent-500 to-primary-500",
       icon: "✂️",
       links: [
-        {
-          title: "Website Fürstenschnitt",
-          url: "https://fuerstenschnitt.com/",
-          icon: "🌐"
-        },
-        {
-          title: "Instagram Fürstenpfote",
-          url: "https://www.instagram.com/fuerstenpfote/",
-          icon: "📸"
-        }
+        { key: "website", url: "https://fuerstenschnitt.com/", icon: "🌐" },
+        { key: "instagram", url: "https://www.instagram.com/fuerstenpfote/", icon: "📸" }
       ],
-      details: [
-        {
-          title: "Social Media Management",
-          desc: "Content-Erstellung für Instagram, Reels und Stories",
-          icon: "📱"
-        },
-        {
-          title: "Hundefrisieren & Grooming",
-          desc: "Professionelles Grooming für Hunde und Katzen",
-          icon: "✂️"
-        },
-        {
-          title: "Video-Produktion",
-          desc: "Aufnahme und Schnitt von Videos für Social Media",
-          icon: "🎥"
-        }
-      ]
+      detailsKeys: ["socialMedia", "grooming", "video"],
+      detailsIcons: ["📱", "✂️", "🎥"]
     },
     {
       id: 5,
-      title: "DoggyStyle Hundesalon",
-      category: "Website-Entwicklung & Grooming",
-      description: "Website-Entwicklung, Branding & Grooming",
-      shortDesc: "Website-Entwicklung mit Wix, Ausbildung zur Hundefriseurin, Grooming",
+      key: "doggystyle",
       tags: ["Wix", "Web Design", "Branding", "Grooming"],
       color: "from-primary-400 to-accent-400",
       icon: "🌐",
       links: [
-        {
-          title: "Website besuchen",
-          url: "https://www.hundesalondoggystylegrimma.com/",
-          icon: "🌐"
-        },
-        {
-          title: "Instagram Grimma",
-          url: "https://www.instagram.com/doggystylegrimma/",
-          icon: "📸"
-        }
+        { key: "website", url: "https://www.hundesalondoggystylegrimma.com/", icon: "🌐" },
+        { key: "instagram", url: "https://www.instagram.com/doggystylegrimma/", icon: "📸" }
       ],
-      details: [
-        {
-          title: "Website-Entwicklung",
-          desc: "Komplette Website mit Wix erstellt - von Design bis Umsetzung",
-          icon: "🌐"
-        },
-        {
-          title: "Branding",
-          desc: "Visuelle Identität und Design-Konzept",
-          icon: "🎨"
-        },
-        {
-          title: "Grooming-Ausbildung",
-          desc: "Ausbildung zur Hundefriseurin und Grundlagen im professionellen Grooming",
-          icon: "✂️"
-        }
-      ]
+      detailsKeys: ["website", "branding", "training"],
+      detailsIcons: ["🌐", "🎨", "✂️"]
     },
     {
       id: 6,
-      title: "Enten-Website 🦆",
-      category: "Fun Project • Web Design",
-      description: "Eine lustige Website über Enten – nicht zu ernst nehmen!",
-      shortDesc: "Ein kreatives Side-Project aus reiner Enten-Liebe – mit spannenden Fakten und einer Prise Humor",
+      key: "ducksWebsite",
       tags: ["Fun Project", "Web Design", "Kreativität", "Easter Egg"],
       color: "from-yellow-400 to-orange-400",
       icon: "🦆",
       links: [
-        {
-          title: "Website besuchen",
-          url: "https://enten-paradies.vercel.app/",
-          icon: "🌐"
-        }
+        { key: "website", url: "https://enten-paradies.vercel.app/", icon: "🌐" }
       ],
-      details: [
-        {
-          title: "Kreatives Side-Project",
-          desc: "Aus purer Enten-Begeisterung entstanden – eine Website mit interessanten Fakten auf lustige Art und Weise",
-          icon: "🦆"
-        },
-        {
-          title: "Web Design & Entwicklung",
-          desc: "Komplette Gestaltung und Umsetzung mit viel Liebe zum Detail",
-          icon: "🎨"
-        },
-        {
-          title: "Content & Humor",
-          desc: "Unterhaltsamer Content, der Wissen mit Spaß verbindet – Enten sind schließlich fantastisch!",
-          icon: "✨"
-        }
-      ]
+      detailsKeys: ["creative", "webDesign", "content"],
+      detailsIcons: ["🦆", "🎨", "✨"]
     },
     {
       id: 7,
-      title: "UI/UX & Prototyping",
-      category: "Interface Design",
-      description: "Benutzerfreundliche Interfaces",
-      shortDesc: "Benutzerfreundliche Interfaces und Prototypen mit Figma",
+      key: "uiux",
       tags: ["Figma", "UX", "Prototyping"],
       color: "from-accent-400 to-primary-400",
       icon: "💡",
-      details: [
-        {
-          title: "UI Design",
-          desc: "Gestaltung moderner, nutzerfreundlicher Interfaces",
-          icon: "🎨"
-        },
-        {
-          title: "UX Research",
-          desc: "Nutzerzentrierung und User Experience Optimierung",
-          icon: "🔍"
-        },
-        {
-          title: "Prototyping",
-          desc: "Interaktive Prototypen und Wireframes mit Figma",
-          icon: "⚡"
-        }
-      ]
+      detailsKeys: ["ui", "ux", "prototyping"],
+      detailsIcons: ["🎨", "🔍", "⚡"]
     }
   ];
   
@@ -291,24 +112,24 @@ const Portfolio = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <span className="inline-block text-primary-600 font-medium text-sm uppercase tracking-wider bg-primary-100 px-4 py-2 rounded-full mb-6">
-            💼 Portfolio
+            {t('portfolio.badge')}
           </span>
           <h1 className="text-5xl md:text-6xl font-display font-bold text-neutral-900 mb-6">
             {t('pages.portfolio.title')}
           </h1>
         <div className="prose prose-lg max-w-none">
-          <ExpandableText maxLines={3}>
             <p className="text-xl text-neutral-700 max-w-3xl mx-auto leading-relaxed">
-              {t('pages.portfolio.content')}
-            </p>
-          </ExpandableText>
-        </div>
+            {t('pages.portfolio.content')}
+          </p>
+          </div>
           <div className="w-24 h-1 bg-gradient-to-r from-primary-400 to-accent-400 mx-auto rounded-full mt-6"></div>
         </div>
         
         {/* Portfolio Grid mit Dropdowns */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 items-start">
-          {portfolioItems.map((item, index) => (
+          {portfolioItemsData.map((item, index) => {
+            const itemData = t(`portfolio.items.${item.key}`, { returnObjects: true });
+            return (
             <div 
               key={item.id}
               className={`rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border-2 self-start ${
@@ -334,10 +155,10 @@ const Portfolio = () => {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white drop-shadow-lg">
-                      {item.title}
+                      {itemData.title}
                     </h3>
                     <span className="text-sm text-white/90 font-medium">
-                      {item.category}
+                      {itemData.category}
                     </span>
                   </div>
                 </div>
@@ -357,8 +178,8 @@ const Portfolio = () => {
               
               {/* Content */}
               <div className={`p-6 ${item.id === 6 ? 'bg-yellow-50/50' : ''}`}>
-                <p className={`leading-relaxed mb-4 break-words ${item.id === 6 ? 'text-neutral-800' : 'text-neutral-700'}`}>
-                  {item.shortDesc}
+                <p className={`leading-relaxed mb-4 ${item.id === 6 ? 'text-neutral-800' : 'text-neutral-700'}`}>
+                  {itemData.shortDesc}
                 </p>
                 
                 {/* Tags */}
@@ -386,14 +207,14 @@ const Portfolio = () => {
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`inline-flex items-center gap-2 px-4 py-2 text-white rounded-full text-sm font-medium transition-all hover:scale-105 shadow-md hover:shadow-lg break-all ${
+                        className={`inline-flex items-center gap-2 px-4 py-2 text-white rounded-full text-sm font-medium transition-all hover:scale-105 shadow-md hover:shadow-lg ${
                           item.id === 6 
                             ? 'bg-yellow-500 hover:bg-yellow-600' 
                             : 'bg-primary-500 hover:bg-primary-600'
                         }`}
                       >
                         <span>{link.icon}</span>
-                        {link.title}
+                        {itemData.links[link.key]}
                       </a>
                     ))}
                   </div>
@@ -410,17 +231,17 @@ const Portfolio = () => {
                   }`}>
                     <h4 className={`text-lg font-bold mb-4 ${
                       item.id === 6 ? 'text-yellow-800' : 'text-primary-700'
-                    }`}>Was ich gemacht habe:</h4>
-                    {item.details.map((detail, detailIndex) => (
+                    }`}>{t('portfolio.whatIDid')}</h4>
+                    {item.detailsKeys.map((detailKey, detailIndex) => (
                       <div key={detailIndex} className={`flex items-start gap-3 p-4 rounded-2xl ${
                         item.id === 6 ? 'bg-yellow-100/70' : 'bg-primary-50'
                       }`}>
-                        <span className="text-2xl">{detail.icon}</span>
+                        <span className="text-2xl">{item.detailsIcons[detailIndex]}</span>
                         <div>
-                          <h5 className="font-bold text-neutral-900 mb-1 break-words">{detail.title}</h5>
-                          <p className={`text-sm break-words ${
+                          <h5 className="font-bold text-neutral-900 mb-1">{itemData.details[detailKey].title}</h5>
+                          <p className={`text-sm ${
                             item.id === 6 ? 'text-neutral-800' : 'text-neutral-700'
-                          }`}>{detail.desc}</p>
+                          }`}>{itemData.details[detailKey].desc}</p>
                         </div>
                       </div>
                     ))}
@@ -428,7 +249,8 @@ const Portfolio = () => {
                 </div>
               </div>
             </div>
-          ))}
+          );
+          })}
         </div>
         
         {/* Easter Egg: "Coming Soon" with plant */}
@@ -442,33 +264,30 @@ const Portfolio = () => {
           
           <div className="relative z-10">
             <span className="text-6xl mb-4 inline-block animate-bounce">🚀</span>
-            <h3 className="text-3xl font-bold text-neutral-900 mb-4">Weitere Projekte kommen bald!</h3>
-            <ExpandableText maxLines={3}>
-              <p className="text-lg text-neutral-700 max-w-2xl mx-auto break-words">
-                Aktuell bin ich noch fleißig am Studium und arbeite an verschiedenen spannenden Projekten. 
-                Aber keine Sorge – es wachsen hier bald mehr Arbeiten als Monstera-Blätter! 🌿
-              </p>
-            </ExpandableText>
+            <h3 className="text-3xl font-bold text-neutral-900 mb-4">{t('portfolio.comingSoon.title')}</h3>
+            <p className="text-lg text-neutral-700 max-w-2xl mx-auto">
+              {t('portfolio.comingSoon.description')}
+            </p>
           </div>
         </div>
         
         {/* CTA */}
         <div className="mt-16 text-center">
           <p className="text-lg text-neutral-700 mb-6">
-            Fragen zu meinen Projekten?
+            {t('portfolio.cta.question')}
           </p>
-          <Link 
-            to="/contact#contact-form" 
+          <a 
+            href="/contact" 
             className="inline-block px-8 py-4 bg-gradient-to-r from-primary-500 to-accent-500 text-white font-bold rounded-full hover:from-primary-600 hover:to-accent-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
           >
-            Melde dich gerne! 💬
-          </Link>
+            {t('portfolio.cta.button')}
+          </a>
         </div>
     </article>
       
       {/* Easter Egg: Floating plant bottom right */}
       <div className="fixed bottom-8 right-8 w-20 h-20 text-primary-400 opacity-30 hover:opacity-100 hover:scale-125 transition-all duration-300 cursor-pointer animate-float z-50"
-           title="🌿 Easter Egg: Jedes Projekt ist einzigartig!">
+           title={t('portfolio.easterEggTooltip')}>
         <OrganicShape variant="monsteraLeaf" className="w-full h-full hover:animate-wiggle" />
       </div>
     </div>

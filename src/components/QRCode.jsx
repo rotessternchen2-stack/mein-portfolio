@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+import { useTranslation } from '@hooks/useTranslation';
 
 const QRCode = ({ url = "https://maria-wallberg-portfolio.de", size = 200, label = "Scan mich!" }) => {
+  const { t } = useTranslation();
   const [isHovered, setIsHovered] = useState(false);
   
   // QR Code API verwenden (kostenfrei)
@@ -50,7 +52,7 @@ const QRCode = ({ url = "https://maria-wallberg-portfolio.de", size = 200, label
           {/* Hint */}
           <div className="text-center mt-3">
             <p className="text-xs text-primary-600 font-medium">
-              📱 Scanne mit deiner Kamera-App
+              {t('pages.about.certificates.qrCodeHint')}
             </p>
           </div>
         </div>
@@ -59,7 +61,7 @@ const QRCode = ({ url = "https://maria-wallberg-portfolio.de", size = 200, label
       {/* Easter Egg: Kleine Animation bei Hover */}
       {isHovered && (
         <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-primary-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg animate-bounce">
-          Probier's aus! 👆
+          {t('pages.about.certificates.qrCodeHover')}
         </div>
       )}
     </div>

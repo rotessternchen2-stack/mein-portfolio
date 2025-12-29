@@ -2,7 +2,6 @@ import '@/App.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "@components/Navbar";
 import Footer from '@components/Footer'
-import ScrollToTop from '@components/ScrollToTop';
 import ErrorBoundary from '@components/ErrorBoundary';
 import { LanguageProvider } from '@contexts/LanguageContext';
 import Home from "@pages/Home";
@@ -19,7 +18,6 @@ function App() {
       <LanguageProvider>
         <div className="min-h-screen flex flex-col">
           <Router>
-            <ScrollToTop />
             <Navbar />
             <main className="flex-grow">
               <Routes>

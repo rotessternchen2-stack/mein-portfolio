@@ -1,8 +1,36 @@
 export const contactTranslations = {
   de: {
+    badge: "💬 Kontakt",
     title: "Fragen? Ich bin für dich da! ☕",
     subtitle: "Schreib mir einfach",
     description: "Du hast eine Frage oder möchtest mehr über meine Arbeit erfahren? Füll einfach das Formular aus und ich melde mich zurück – garantiert schneller als ein Hund auf 'Leckerli!' reagiert. 🐕",
+    
+    whyMe: {
+      title: "💼 Warum ich?",
+      creative: {
+        title: "Kreativ & Strategisch",
+        description: "Ich verbinde kreatives Design mit strategischem Denken für Lösungen, die funktionieren."
+      },
+      versatile: {
+        title: "Vielseitig",
+        description: "Von UX/UI über Frontend bis Social Media – ich decke verschiedene Bereiche ab."
+      },
+      userCentric: {
+        title: "Nutzerorientiert",
+        description: "Der User steht im Mittelpunkt – schönes Design, das auch funktioniert."
+      },
+      responsive: {
+        title: "Schnelle Antwort",
+        description: "Ich melde mich schnell zurück – versprochen!"
+      }
+    },
+    
+    funFact: {
+      label: "💡 Fun Fact:",
+      text: "Als Hundefriseurin habe ich gelernt: Geduld, Präzision und ein Auge fürs Detail sind das A und O – genau wie im Design! Nur dass Stakeholder nicht ganz so kuschelig sind. 😄"
+    },
+    
+    easterEggTooltip: "🌿 Easter Egg: Jedes Projekt ist einzigartig!",
     
     form: {
       name: {
@@ -50,9 +78,37 @@ export const contactTranslations = {
   },
 
   en: {
+    badge: "💬 Contact",
     title: "Questions? I'm here! ☕",
     subtitle: "Just drop me a message",
     description: "Got a question or want to learn more about my work? Just fill out the form and I'll get back to you – guaranteed faster than a dog reacts to 'treat!' 🐕",
+    
+    whyMe: {
+      title: "💼 Why me?",
+      creative: {
+        title: "Creative & Strategic",
+        description: "I combine creative design with strategic thinking for solutions that work."
+      },
+      versatile: {
+        title: "Versatile",
+        description: "From UX/UI to frontend to social media – I cover various areas."
+      },
+      userCentric: {
+        title: "User-Centered",
+        description: "The user is at the center – beautiful design that also works."
+      },
+      responsive: {
+        title: "Quick Response",
+        description: "I'll get back to you quickly – promise!"
+      }
+    },
+    
+    funFact: {
+      label: "💡 Fun Fact:",
+      text: "As a dog groomer, I learned: Patience, precision, and an eye for detail are essential – just like in design! Except stakeholders aren't quite as cuddly. 😄"
+    },
+    
+    easterEggTooltip: "🌿 Easter Egg: Every project is unique!",
     
     form: {
       name: {

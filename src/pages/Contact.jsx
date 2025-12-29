@@ -4,7 +4,6 @@ import InputField from "@components/InputField";
 import PrimaryButton from "@components/PrimaryButton";
 import PlantOverlay from "@components/PlantOverlay";
 import OrganicShape from "@components/OrganicShape";
-import ExpandableText from "@components/ExpandableText";
 import { sendContactMessage } from "@/services/emailService";
 
 const Contact = () => {
@@ -176,14 +175,12 @@ const Contact = () => {
       <div className="relative max-w-6xl mx-auto px-8 py-16">
         <div className="text-center mb-12">
           <span className="inline-block text-primary-600 font-medium text-sm uppercase tracking-wider bg-primary-100 px-4 py-2 rounded-full mb-6">
-            💬 Kontakt
+            {t('contact.badge')}
           </span>
           <h1 className="text-5xl md:text-6xl font-display font-bold text-neutral-900 mb-4">
             {t('contact.title')}
           </h1>
-          <ExpandableText maxLines={3}>
-            <p className="text-xl text-neutral-700 max-w-2xl mx-auto">{t('contact.description')}</p>
-          </ExpandableText>
+          <p className="text-xl text-neutral-700 max-w-2xl mx-auto">{t('contact.description')}</p>
         </div>
         
         <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -191,53 +188,47 @@ const Contact = () => {
           {/* Why Contact Me Card */}
           <div className="space-y-6">
             <div className="bg-white rounded-3xl p-8 shadow-lg border-2 border-primary-100 hover:border-primary-300 transition-all duration-300">
-              <h2 className="text-2xl font-bold text-neutral-900 mb-6 flex items-center gap-2">
-                <span>💼</span> Warum ich?
+              <h2 className="text-2xl font-bold text-neutral-900 mb-6">
+                {t('contact.whyMe.title')}
               </h2>
               
               <div className="space-y-4">
                 <div className="flex items-start gap-4 p-4 bg-primary-50 rounded-2xl">
                   <span className="text-2xl">🎨</span>
                   <div>
-                    <p className="text-sm font-bold text-primary-700 mb-1">Kreativ & Strategisch</p>
-                    <ExpandableText maxLines={3}>
-                      <p className="text-sm text-neutral-700 break-words">
-                        Ich verbinde kreatives Design mit strategischem Denken für Lösungen, die funktionieren.
-                      </p>
-                    </ExpandableText>
+                    <p className="text-sm font-bold text-primary-700 mb-1">{t('contact.whyMe.creative.title')}</p>
+                    <p className="text-sm text-neutral-700">
+                      {t('contact.whyMe.creative.description')}
+                    </p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-4 p-4 bg-primary-50 rounded-2xl">
                   <span className="text-2xl">🚀</span>
                   <div>
-                    <p className="text-sm font-bold text-primary-700 mb-1">Vielseitig</p>
-                    <ExpandableText maxLines={3}>
-                      <p className="text-sm text-neutral-700 break-words">
-                        Von UX/UI über Frontend bis Social Media – ich decke verschiedene Bereiche ab.
-                      </p>
-                    </ExpandableText>
+                    <p className="text-sm font-bold text-primary-700 mb-1">{t('contact.whyMe.versatile.title')}</p>
+                    <p className="text-sm text-neutral-700">
+                      {t('contact.whyMe.versatile.description')}
+                    </p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-4 p-4 bg-primary-50 rounded-2xl">
                   <span className="text-2xl">💡</span>
                   <div>
-                    <p className="text-sm font-bold text-primary-700 mb-1">Nutzerorientiert</p>
-                    <ExpandableText maxLines={3}>
-                      <p className="text-sm text-neutral-700 break-words">
-                        Der User steht im Mittelpunkt – schönes Design, das auch funktioniert.
-                      </p>
-                    </ExpandableText>
+                    <p className="text-sm font-bold text-primary-700 mb-1">{t('contact.whyMe.userCentric.title')}</p>
+                    <p className="text-sm text-neutral-700">
+                      {t('contact.whyMe.userCentric.description')}
+                    </p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-4 p-4 bg-accent-50 rounded-2xl">
                   <span className="text-2xl">⚡</span>
                   <div>
-                    <p className="text-sm font-bold text-accent-700 mb-1">Schnelle Antwort</p>
+                    <p className="text-sm font-bold text-accent-700 mb-1">{t('contact.whyMe.responsive.title')}</p>
                     <p className="text-sm text-neutral-700">
-                      Ich melde mich schnell zurück – versprochen!
+                      {t('contact.whyMe.responsive.description')}
                     </p>
                   </div>
                 </div>
@@ -249,20 +240,17 @@ const Contact = () => {
               <div className="flex items-start gap-4">
                 <span className="text-3xl animate-float">✂️</span>
                 <div>
-                  <p className="text-sm font-bold text-primary-700 mb-2">💡 Fun Fact:</p>
-                  <ExpandableText maxLines={3}>
-                    <p className="text-sm text-neutral-700 break-words">
-                      Als Hundefriseurin habe ich gelernt: Geduld, Präzision und ein Auge fürs Detail sind 
-                      das A und O – genau wie im Design! Nur dass Stakeholder nicht ganz so kuschelig sind. 😄
-                    </p>
-                  </ExpandableText>
+                  <p className="text-sm font-bold text-primary-700 mb-2">{t('contact.funFact.label')}</p>
+                  <p className="text-sm text-neutral-700">
+                    {t('contact.funFact.text')}
+                  </p>
                 </div>
               </div>
             </div>
           </div>
           
           {/* Contact Form */}
-          <div id="contact-form" className="bg-white rounded-3xl p-8 shadow-xl border-2 border-primary-100 relative overflow-hidden scroll-mt-24">
+          <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-primary-100 relative overflow-hidden">
             {/* Organischer Hintergrund */}
             <div className="absolute -top-10 -right-10 w-40 h-40 text-primary-100 opacity-50 pointer-events-none">
               <OrganicShape variant="blob3" className="w-full h-full" animate={false} />
@@ -358,7 +346,7 @@ const Contact = () => {
       
       {/* Easter Egg: Floating leaf bottom right */}
       <div className="fixed bottom-8 left-8 w-16 h-16 text-accent-400 opacity-40 hover:opacity-100 hover:scale-125 transition-all duration-300 cursor-pointer animate-float-slow z-50"
-           title="🌿 Easter Egg: Jedes Projekt ist einzigartig!">
+           title={t('contact.easterEggTooltip')}>
         <OrganicShape variant="leaf" className="w-full h-full hover:animate-wiggle" />
       </div>
     </div>

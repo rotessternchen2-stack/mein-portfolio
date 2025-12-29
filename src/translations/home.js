@@ -2,7 +2,7 @@ export const homeTranslations = {
   de: {
     hero: {
       title: "Hi, ich bin Maria! 👋",
-      subtitle: "Mediendesignerin • UX/UI Design • Grafikdesign • Kreative\u00A0Konzepte ✨",
+      subtitle: "Mediendesignerin • UX/UI Design • Frontend-Entwicklung • Kreative Konzepte ✨",
       buttons: {
         portfolio: "Meine Arbeiten ansehen",
         contact: "Kontakt aufnehmen"
@@ -59,13 +59,18 @@ export const homeTranslations = {
       title: "Bereit für neue Herausforderungen! 🚀",
       description: "Kreative Lösungen entwickeln, die wirklich funktionieren – das ist meine Leidenschaft. Ob digitale Produkte, crossmediale Kampagnen oder innovative Konzepte: Ich bringe frische Perspektiven und hands-on Mentalität mit!",
       button: "Kontakt aufnehmen"
+    },
+
+    easterEgg: {
+      title: "🌿 Fun Fact: Warum Pflanzen in meinem Design? (Klick mich!)",
+      description: "Monstera und Alocasia sind nicht nur wunderschön, sondern auch super resilient – genau wie gutes Design! Sie passen sich an, wachsen in verschiedene Richtungen und jedes Blatt ist einzigartig. Das erinnert mich daran, dass jedes Projekt seine eigene Form finden darf. Plus: Die sehen einfach mega aus! 🌱✨"
     }
   },
 
   en: {
     hero: {
       title: "Hi, I'm Maria! 👋",
-      subtitle: "Media Designer • UX/UI Design • Graphic Design • Creative\u00A0Concepts ✨",
+      subtitle: "Media Designer • UX/UI Design • Frontend Development • Creative Concepts ✨",
       buttons: {
         portfolio: "View My Work",
         contact: "Get In Touch"
@@ -122,6 +127,11 @@ export const homeTranslations = {
       title: "Ready for new challenges! 🚀",
       description: "Developing creative solutions that really work – that's my passion. Whether it's digital products, cross-media campaigns, or innovative concepts: I bring fresh perspectives and a hands-on mentality!",
       button: "Get in touch"
+    },
+
+    easterEgg: {
+      title: "🌿 Fun Fact: Why plants in my design? (Click me!)",
+      description: "Monstera and Alocasia are not only beautiful but also super resilient – just like good design! They adapt, grow in different directions, and every leaf is unique. It reminds me that every project deserves to find its own form. Plus: They just look amazing! 🌱✨"
     }
   }
 };
