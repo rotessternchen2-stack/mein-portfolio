@@ -327,14 +327,11 @@ const Portfolio = () => {
                     return;
                   }
                   
-                  // Auf Desktop: Speichere Scroll-Position zu den Kacheln
-                  const foldersSection = document.querySelector('[data-portfolio-folders]');
-                  if (foldersSection) {
-                    const scrollPosition = foldersSection.offsetTop - 100; // Etwas oberhalb für bessere Sicht
-                    // Sicherheit: Validiere Scroll-Position vor dem Speichern
-                    if (scrollPosition >= 0 && scrollPosition <= 100000) {
-                      sessionStorage.setItem('portfolioScrollPosition', scrollPosition.toString());
-                    }
+                  // Auf Desktop: Speichere die aktuelle Scroll-Position
+                  const scrollPosition = window.scrollY || window.pageYOffset || 0;
+                  // Sicherheit: Validiere Scroll-Position vor dem Speichern
+                  if (scrollPosition >= 0 && scrollPosition <= 100000) {
+                    sessionStorage.setItem('portfolioScrollPosition', scrollPosition.toString());
                   }
                 }}
                 className="group relative rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-primary-100 hover:border-primary-300 bg-white"

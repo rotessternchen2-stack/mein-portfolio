@@ -376,17 +376,15 @@ const PortfolioDetail = () => {
     window.scrollTo({ top: 0, behavior: 'instant' });
   }, [slug, location.pathname]);
   
-  // Einfacher Zurück-Button mit fester Scroll-Position
+  // Zurück-Button: Navigiere zurück zur Portfolio-Seite mit Scroll-Position
   const handleBackClick = () => {
-    // Sicherheit: Validiere Scroll-Position vor dem Speichern
-    const scrollPosition = '2000';
-    if (parseInt(scrollPosition, 10) >= 0 && parseInt(scrollPosition, 10) <= 100000) {
-      sessionStorage.setItem('portfolioScrollPosition', scrollPosition);
-    }
-    
-    // Navigiere direkt mit window.location für zuverlässige Navigation
-    // Sicherheit: Nur relative Pfade erlauben
-    window.location.href = '/portfolio';
+    // Die Scroll-Position wurde bereits beim Klick auf die Kachel gespeichert
+    // Wir müssen nur mit React Router navigieren und fromDetail: true setzen,
+    // damit Portfolio.jsx weiß, dass es die Scroll-Position wiederherstellen soll
+    navigate('/portfolio', { 
+      state: { fromDetail: true },
+      replace: false
+    });
   };
   
   // Lightbox-Funktionen
