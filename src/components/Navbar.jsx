@@ -17,6 +17,12 @@ const Navbar = () => {
   const toggleMobileMenu = () => setIsMobileMenuOpen((prev) => !prev);
   
   const { t, changeLanguage, currentLanguage } = useTranslation();
+  
+  // Funktion zum Scrollen nach oben beim Klick auf einen Link
+  const handleNavLinkClick = () => {
+    setIsMobileMenuOpen(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const handleLanguageChange = () => {
     changeLanguage(currentLanguage === 'de' ? 'en' : 'de');
@@ -41,26 +47,26 @@ const Navbar = () => {
 
         {/* Mitte: Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8 text-lg">
-          <Link to="/about" className="hover:text-green-700 transition">
+          <Link to="/about" onClick={handleNavLinkClick} className="hover:text-green-700 transition">
             {t('nav.about')}
           </Link>
           
-          <Link to="/portfolio" className="hover:text-green-700 transition">
+          <Link to="/portfolio" onClick={handleNavLinkClick} className="hover:text-green-700 transition">
               {t('nav.portfolio')}
                   </Link>
 
-          <Link to="/" className="flex items-center">
+          <Link to="/" onClick={handleNavLinkClick} className="flex items-center">
             <img src={logo} alt={t('a11y.logoAlt')} className="max-h-14" />
           </Link>
 
-          <Link to="/" className="hover:text-green-700 transition">
+          <Link to="/" onClick={handleNavLinkClick} className="hover:text-green-700 transition">
             {t('nav.home')}
           </Link>
         </div>
 
         {/* Mobile: Logo in der Mitte */}
         <div className="md:hidden absolute left-1/2 transform -translate-x-1/2">
-          <Link to="/" className="flex items-center">
+          <Link to="/" onClick={handleNavLinkClick} className="flex items-center">
             <img src={logo} alt={t('a11y.logoAlt')} className="max-h-12" />
           </Link>
         </div>
@@ -69,7 +75,7 @@ const Navbar = () => {
         <div className="flex items-center">
           {/* Desktop */}
           <div className="hidden md:block">
-            <Link to="/contact">
+            <Link to="/contact" onClick={handleNavLinkClick}>
               <PrimaryButton label={t('nav.contact')} />
             </Link>
           </div>
@@ -105,28 +111,28 @@ const Navbar = () => {
             <Link 
               to="/" 
               className="px-4 py-2 hover:bg-green-200 rounded-lg transition"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={handleNavLinkClick}
             >
               {t('nav.home')}
             </Link>
             <Link 
               to="/about" 
               className="px-4 py-2 hover:bg-green-200 rounded-lg transition"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={handleNavLinkClick}
             >
               {t('nav.about')}
             </Link>
             <Link 
               to="/portfolio" 
               className="px-4 py-2 hover:bg-green-200 rounded-lg transition"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={handleNavLinkClick}
             >
               {t('nav.portfolio')}
             </Link>
             <Link 
               to="/contact" 
               className="px-4 py-2 bg-green-900 text-green-200 rounded-lg hover:bg-green-800 transition text-center"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={handleNavLinkClick}
             >
               {t('nav.contact')}
             </Link>

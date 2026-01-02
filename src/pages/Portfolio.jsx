@@ -1,11 +1,58 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "@hooks/useTranslation";
 import PlantOverlay from "@components/PlantOverlay";
 import OrganicShape from "@components/OrganicShape";
+import { getPortfolioStructure } from "@utils/portfolioStructure";
 
 const Portfolio = () => {
   const { t } = useTranslation();
+  const location = useLocation();
   const [openDropdownId, setOpenDropdownId] = useState(null);
+  const portfolioFoldersRef = useRef(null);
+
+  // Scroll-Position wiederherstellen beim Zurückkommen von Detail-Seite
+  useEffect(() => {
+    // Prüfe ob wir auf Mobile sind
+    const isMobile = window.innerWidth < 768;
+    
+    // Prüfe ob wir von einer Detail-Seite kommen (durch sessionStorage)
+    const scrollPosition = sessionStorage.getItem('portfolioScrollPosition');
+    const fromDetail = location.state?.fromDetail;
+    
+    // Sicherheit: Validiere sessionStorage-Wert
+    const isValidScrollPosition = (pos) => {
+      const num = parseInt(pos, 10);
+      return !isNaN(num) && num >= 0 && num <= 100000; // Max 100000px
+    };
+    
+    // Auf Mobile immer nach oben scrollen
+    if (isMobile) {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      sessionStorage.removeItem('portfolioScrollPosition');
+      return;
+    }
+    
+    // Auf Desktop: Scroll zu gespeicherter Position wenn von Detail-Seite
+    if (scrollPosition && fromDetail && isValidScrollPosition(scrollPosition)) {
+      // Warte bis die Seite vollständig geladen ist
+      setTimeout(() => {
+        window.scrollTo({
+          top: parseInt(scrollPosition, 10),
+          behavior: 'smooth'
+        });
+        sessionStorage.removeItem('portfolioScrollPosition');
+      }, 100);
+    } else {
+      // Wenn nicht von Detail-Seite kommend, immer nach oben scrollen
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      // Entferne alte Scroll-Position falls vorhanden
+      if (scrollPosition) {
+        sessionStorage.removeItem('portfolioScrollPosition');
+      }
+    }
+  }, [location.pathname, location.state]);
+
 
   const toggleDropdown = (id) => {
     setOpenDropdownId(prevId => prevId === id ? null : id);
@@ -67,8 +114,7 @@ const Portfolio = () => {
       color: "from-primary-400 to-accent-400",
       icon: "🌐",
       links: [
-        { key: "website", url: "https://www.hundesalondoggystylegrimma.com/", icon: "🌐" },
-        { key: "instagram", url: "https://www.instagram.com/doggystylegrimma/", icon: "📸" }
+        { key: "website", url: "https://www.hundesalondoggystylegrimma.com/", icon: "🌐" }
       ],
       detailsKeys: ["website", "branding", "training"],
       detailsIcons: ["🌐", "🎨", "✂️"]
@@ -253,6 +299,106 @@ const Portfolio = () => {
           })}
         </div>
         
+        {/* Portfolio-Ordner Kacheln */}
+        <div className="mt-16" data-portfolio-folders>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-neutral-900 mb-4">
+              {t('portfolio.folders.title')}
+            </h2>
+            <p className="text-lg text-neutral-700 max-w-3xl mx-auto">
+              {t('portfolio.folders.description')}
+            </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary-400 to-accent-400 mx-auto rounded-full mt-6"></div>
+          </div>
+          
+          <div ref={portfolioFoldersRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {getPortfolioStructure().map((folder, index) => (
+              <Link
+                key={folder.slug}
+                to={`/portfolio/${folder.slug}`}
+                state={{ fromPortfolio: true }}
+                onClick={() => {
+                  // Prüfe ob wir auf Mobile sind
+                  const isMobile = window.innerWidth < 768;
+                  
+                  // Auf Mobile: Keine Scroll-Position speichern, immer oben starten
+                  if (isMobile) {
+                    sessionStorage.removeItem('portfolioScrollPosition');
+                    return;
+                  }
+                  
+                  // Auf Desktop: Speichere Scroll-Position zu den Kacheln
+                  const foldersSection = document.querySelector('[data-portfolio-folders]');
+                  if (foldersSection) {
+                    const scrollPosition = foldersSection.offsetTop - 100; // Etwas oberhalb für bessere Sicht
+                    // Sicherheit: Validiere Scroll-Position vor dem Speichern
+                    if (scrollPosition >= 0 && scrollPosition <= 100000) {
+                      sessionStorage.setItem('portfolioScrollPosition', scrollPosition.toString());
+                    }
+                  }
+                }}
+                className="group relative rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-primary-100 hover:border-primary-300 bg-white"
+              >
+                {/* Header mit Gradient */}
+                <div className={`h-32 bg-gradient-to-br ${folder.color} relative overflow-hidden flex items-center justify-between px-6`}>
+                  {/* Subtiles Muster */}
+                  <div className="absolute inset-0 opacity-10">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-white rounded-full blur-3xl"></div>
+                    <div className="absolute bottom-0 left-0 w-40 h-40 bg-white rounded-full blur-3xl"></div>
+                  </div>
+                  
+                  <div className="relative z-10 flex items-center gap-4 flex-1">
+                    <div className="w-16 h-16 bg-white/20 backdrop-blur rounded-2xl flex items-center justify-center shadow-lg">
+                      <span className="text-4xl">{folder.icon}</span>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-xl font-bold text-white drop-shadow-lg line-clamp-2">
+                        {folder.name}
+                      </h3>
+                    </div>
+                  </div>
+                  <div className="relative z-10">
+                    <div className="w-10 h-10 bg-white/20 backdrop-blur rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <svg 
+                        className="w-5 h-5 text-white"
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Content Preview */}
+                <div className="p-6">
+                  <div className="flex items-center gap-2 text-sm text-neutral-600 mb-4">
+                    <span>
+                      {folder.files && folder.files.length > 0 && (
+                        <>
+                          {folder.files.length} {folder.files.length === 1 ? t('portfolio.folders.file') : t('portfolio.folders.files')}
+                        </>
+                      )}
+                      {folder.subfolders && folder.subfolders.length > 0 && (
+                        <>
+                          {folder.subfolders.length} {folder.subfolders.length === 1 ? t('portfolio.folders.folder') : t('portfolio.folders.folders')}
+                        </>
+                      )}
+                    </span>
+                  </div>
+                  <div className="flex items-center text-primary-600 font-medium group-hover:text-primary-700 transition-colors">
+                    <span>{t('portfolio.folders.viewContent')}</span>
+                    <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+        
         {/* Easter Egg: "Coming Soon" with plant */}
         <div className="mt-16 bg-gradient-to-br from-primary-100 via-accent-100 to-primary-100 rounded-3xl p-12 text-center relative overflow-hidden shadow-lg">
           <div className="absolute top-0 right-0 w-40 h-40 text-primary-200 opacity-20 pointer-events-none">
@@ -277,7 +423,12 @@ const Portfolio = () => {
             {t('portfolio.cta.question')}
           </p>
           <a 
-            href="/contact" 
+            href="/contact"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'instant' });
+              window.location.href = '/contact';
+            }} 
             className="inline-block px-8 py-4 bg-gradient-to-r from-primary-500 to-accent-500 text-white font-bold rounded-full hover:from-primary-600 hover:to-accent-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
           >
             {t('portfolio.cta.button')}

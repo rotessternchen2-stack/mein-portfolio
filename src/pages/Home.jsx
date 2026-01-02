@@ -1,5 +1,7 @@
+import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import mariaHero from "@assets/maria-hero.png"; // Neues Profilfoto
+import mariaHero from "@assets/maria-hero.png";
 import { useTranslation } from "@hooks/useTranslation";
 import Hero from "@components/Hero";
 import Section from "@components/Section";
@@ -7,6 +9,55 @@ import ServiceItem from "@components/ServiceItem";
 import PrimaryButton from "@components/PrimaryButton";
 import PlantOverlay from "@components/PlantOverlay";
 import OrganicShape from "@components/OrganicShape";
+
+// Komponente für "Mehr lesen" Funktionalität (nur Mobile)
+const ExpandableText = ({ text, maxLength = 150, className = "text-neutral-700 leading-relaxed" }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const { t } = useTranslation();
+  
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768); // md breakpoint
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+  
+  // Auf Desktop immer vollständigen Text zeigen
+  if (!isMobile || !text || text.length <= maxLength) {
+    return <p className={className}>{text}</p>;
+  }
+  
+  // Auf Mobile: Truncation mit "Mehr anzeigen"
+  const truncatedText = text.substring(0, maxLength);
+  const shouldTruncate = text.length > maxLength;
+  
+  return (
+    <div>
+      <p className={className}>
+        {isExpanded ? text : truncatedText}
+        {shouldTruncate && !isExpanded && '...'}
+      </p>
+      {shouldTruncate && (
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="mt-2 text-primary-600 hover:text-primary-700 font-medium text-sm transition-colors md:hidden"
+        >
+          {isExpanded ? t('common.showLess') : t('common.showMore')}
+        </button>
+      )}
+    </div>
+  );
+};
+
+ExpandableText.propTypes = {
+  text: PropTypes.string.isRequired,
+  maxLength: PropTypes.number,
+  className: PropTypes.string
+};
 
 const Home = () => {
   const { t } = useTranslation();
@@ -51,9 +102,7 @@ const Home = () => {
               <div className="absolute -bottom-10 -right-10 w-40 h-40 text-accent-100 opacity-50 pointer-events-none">
                 <OrganicShape variant="blob3" className="w-full h-full" animate={true} />
               </div>
-              <p className="text-xl leading-relaxed text-neutral-800 relative z-10">
-            {t('home.intro')}
-          </p>
+              <ExpandableText text={t('home.intro')} maxLength={200} className="text-xl leading-relaxed text-neutral-800 relative z-10" />
             </div>
           </div>
           
@@ -76,9 +125,7 @@ const Home = () => {
                   <h3 className="text-xl font-bold text-neutral-900 mb-3 group-hover:text-primary-600 transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-neutral-700 leading-relaxed">
-                    {service.description}
-                  </p>
+                  <ExpandableText text={service.description} maxLength={120} />
                 </div>
             ))}
             </div>
@@ -104,12 +151,10 @@ const Home = () => {
             {strengths.map((strength) => (
                   <div key={strength.key} 
                        className="bg-white rounded-[2rem] p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-primary-200 hover:border-primary-400">
-                    <h3 className="text-2xl font-bold text-primary-700 mb-3">
+                    <h3 className="text-2xl font-bold text-primary-700 mb-3 break-words">
                       {strength.title}
                     </h3>
-                    <p className="text-neutral-700 leading-relaxed">
-                      {strength.description}
-                    </p>
+                    <ExpandableText text={strength.description} maxLength={150} />
                   </div>
             ))}
               </div>
@@ -120,13 +165,18 @@ const Home = () => {
           <div className="relative text-center py-12">
             <div className="absolute inset-0 bg-gradient-to-r from-primary-100 via-accent-100 to-primary-100 rounded-[3rem] opacity-50"></div>
             <div className="relative z-10 p-12">
-              <h2 className="text-4xl md:text-5xl font-display font-bold text-neutral-900 mb-6">
+              <h2 className="text-4xl md:text-5xl font-display font-bold text-neutral-900 mb-6 break-words whitespace-pre-line">
                 {t('home.cta.title')}
               </h2>
               <p className="text-xl text-neutral-700 mb-8 max-w-2xl mx-auto">
                 {t('home.cta.description')}
               </p>
-            <Link to="/contact">
+            <Link 
+              to="/contact"
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: 'instant' });
+              }}
+            >
               <PrimaryButton label={t('home.cta.button')} />
             </Link>
             </div>

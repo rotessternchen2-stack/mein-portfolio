@@ -37,6 +37,9 @@ const NotFound = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link 
             to="/"
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: 'instant' });
+            }}
             className="inline-block px-8 py-4 bg-gradient-to-r from-primary-500 to-accent-500 text-white font-bold rounded-full hover:from-primary-600 hover:to-accent-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
           >
             {t('pages.notFound.homeButton')}
@@ -44,6 +47,10 @@ const NotFound = () => {
           
           <Link 
             to="/portfolio"
+            onClick={() => {
+              sessionStorage.removeItem('portfolioScrollPosition');
+              window.scrollTo({ top: 0, behavior: 'instant' });
+            }}
             className="inline-block px-8 py-4 bg-white text-primary-700 font-bold rounded-full hover:bg-primary-50 transition-all duration-300 shadow-md hover:shadow-lg border-2 border-primary-300"
           >
             {t('pages.notFound.portfolioButton')}

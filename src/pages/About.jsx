@@ -12,17 +12,10 @@ const About = () => {
   const skillsData = t('pages.about.skills.categories', { returnObjects: true });
   const certificatesData = t('pages.about.certificates.items', { returnObjects: true });
   
-  // Sicherstellen, dass es Arrays sind - mit Debug-Info
+  // Sicherstellen, dass es Arrays sind
   const experiences = Array.isArray(timelineData) ? timelineData : [];
   const skills = Array.isArray(skillsData) ? skillsData : [];
   const certificates = Array.isArray(certificatesData) ? certificatesData : [];
-  
-  // Debug in Entwicklung
-  if (process.env.NODE_ENV === 'development') {
-    if (experiences.length === 0) console.warn('Timeline data is empty:', timelineData);
-    if (skills.length === 0) console.warn('Skills data is empty:', skillsData);
-    if (certificates.length === 0) console.warn('Certificates data is empty:', certificatesData);
-  }
   
   return (
     <div className="relative bg-gradient-to-b from-white via-primary-50 to-white overflow-hidden">

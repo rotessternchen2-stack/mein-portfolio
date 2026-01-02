@@ -12,7 +12,6 @@ export const useTranslation = () => {
       if (value && typeof value === 'object' && k in value) {
         value = value[k];
       } else {
-        console.warn(`Translation key not found: ${key}`);
         return options.returnObjects ? undefined : key; 
       }
     }
@@ -34,5 +33,4 @@ export const useTranslation = () => {
     availableLanguages: Object.keys(translations)
   };
 };
-console.log('Translations:', translations);
 

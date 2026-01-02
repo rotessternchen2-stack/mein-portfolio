@@ -12,6 +12,85 @@ export const portfolioTranslations = {
     },
     easterEggTooltip: "🌿 Easter Egg: Jedes Projekt ist einzigartig!",
     
+    folders: {
+      title: "Portfolio-Ordner",
+      description: "Durchstöbere meine Arbeiten nach Projekten – von Social Media über Corporate Design bis hin zu UX-Ausarbeitungen.",
+      file: "Datei",
+      files: "Dateien",
+      folder: "Ordner",
+      folders: "Ordner",
+      viewContent: "Inhalt ansehen",
+      "fuerstenschnitt-reels": {
+        category: "Video Content"
+      },
+      fuerstenschnittReels: {
+        category: "Video Content"
+      },
+      "ads-social-media": {
+        category: "Social Media Ads"
+      },
+      adsSocialMedia: {
+        category: "Social Media Ads"
+      },
+      "cd-pflegevertrag": {
+        category: "Corporate Design"
+      },
+      cdPflegevertrag: {
+        category: "Corporate Design"
+      },
+      "crossmedia-dm": {
+        category: "CrossMedia Kampagne"
+      },
+      crossmediaDm: {
+        category: "CrossMedia Kampagne"
+      },
+      "etikett-design": {
+        category: "Grafikdesign"
+      },
+      etikettDesign: {
+        category: "Grafikdesign"
+      },
+      "pawbuddy-kampagne": {
+        category: "Marketing Kampagne"
+      },
+      pawbuddyKampagne: {
+        category: "Marketing Kampagne"
+      },
+      "kochbuch-check24": {
+        category: "Print Design"
+      },
+      kochbuchCheck24: {
+        category: "Print Design"
+      },
+      "obenauf-kaffee": {
+        category: "Corporate Design"
+      },
+      obenaufKaffee: {
+        category: "Corporate Design"
+      },
+      "ux-lvb": {
+        category: "UX Design"
+      },
+      uxLvb: {
+        category: "UX Design"
+      }
+    },
+    
+    detail: {
+      backToPortfolio: "Zurück zum Portfolio",
+      videoNotSupported: "Dein Browser unterstützt dieses Video-Format nicht.",
+      videoError: "Video konnte nicht geladen werden",
+      videos: "Videos",
+      otherFiles: "Weitere Dateien",
+      document: "Dokument",
+      open: "Öffnen",
+      notFound: {
+        title: "Ordner nicht gefunden",
+        description: "Der angeforderte Portfolio-Ordner konnte nicht gefunden werden.",
+        backButton: "Zurück zum Portfolio"
+      }
+    },
+    
     items: {
       check24: {
         title: "Check24",
@@ -202,6 +281,85 @@ export const portfolioTranslations = {
       button: "Feel free to reach out! 💬"
     },
     easterEggTooltip: "🌿 Easter Egg: Every project is unique!",
+    
+    folders: {
+      title: "Portfolio Folders",
+      description: "Browse my work by project – from social media to corporate design to UX work.",
+      file: "file",
+      files: "files",
+      folder: "folder",
+      folders: "folders",
+      viewContent: "View content",
+      "fuerstenschnitt-reels": {
+        category: "Video Content"
+      },
+      fuerstenschnittReels: {
+        category: "Video Content"
+      },
+      "ads-social-media": {
+        category: "Social Media Ads"
+      },
+      adsSocialMedia: {
+        category: "Social Media Ads"
+      },
+      "cd-pflegevertrag": {
+        category: "Corporate Design"
+      },
+      cdPflegevertrag: {
+        category: "Corporate Design"
+      },
+      "crossmedia-dm": {
+        category: "CrossMedia Campaign"
+      },
+      crossmediaDm: {
+        category: "CrossMedia Campaign"
+      },
+      "etikett-design": {
+        category: "Graphic Design"
+      },
+      etikettDesign: {
+        category: "Graphic Design"
+      },
+      "pawbuddy-kampagne": {
+        category: "Marketing Campaign"
+      },
+      pawbuddyKampagne: {
+        category: "Marketing Campaign"
+      },
+      "kochbuch-check24": {
+        category: "Print Design"
+      },
+      kochbuchCheck24: {
+        category: "Print Design"
+      },
+      "obenauf-kaffee": {
+        category: "Corporate Design"
+      },
+      obenaufKaffee: {
+        category: "Corporate Design"
+      },
+      "ux-lvb": {
+        category: "UX Design"
+      },
+      uxLvb: {
+        category: "UX Design"
+      }
+    },
+    
+    detail: {
+      backToPortfolio: "Back to Portfolio",
+      videoNotSupported: "Your browser does not support this video format.",
+      videoError: "Video could not be loaded",
+      videos: "Videos",
+      otherFiles: "Other Files",
+      document: "Document",
+      open: "Open",
+      notFound: {
+        title: "Folder not found",
+        description: "The requested portfolio folder could not be found.",
+        backButton: "Back to Portfolio"
+      }
+    },
     
     items: {
       check24: {

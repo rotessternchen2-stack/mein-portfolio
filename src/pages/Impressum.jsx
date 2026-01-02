@@ -84,6 +84,11 @@ const Impressum = () => {
         <div className="text-center mt-12">
           <a 
             href="/" 
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'instant' });
+              window.location.href = '/';
+            }}
             className="inline-block px-8 py-4 bg-gradient-to-r from-primary-500 to-accent-500 text-white font-bold rounded-full hover:from-primary-600 hover:to-accent-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
           >
             {t('legal.impressum.backButton')}

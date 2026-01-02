@@ -28,7 +28,7 @@ const Hero = ({ imageSrc, imageAlt, title, subtitle }) => {
       <PlantOverlay position="bottom-left" opacity={0.06} color="text-accent-300" />
       
       {/* Main Content */}
-      <div className="relative z-10 container mx-auto px-8 py-20 min-h-screen flex items-center">
+      <div className="relative z-10 container mx-auto px-8 pt-32 pb-20 md:py-20 min-h-screen flex items-center">
         <div className="grid md:grid-cols-2 gap-12 items-center w-full">
           
           {/* Text Content */}
@@ -50,6 +50,11 @@ const Hero = ({ imageSrc, imageAlt, title, subtitle }) => {
             <div className="pt-4 flex gap-4 flex-wrap">
               <Link 
                 to="/portfolio" 
+                onClick={() => {
+                  // Entferne alte Scroll-Position, damit wir oben landen
+                  sessionStorage.removeItem('portfolioScrollPosition');
+                  window.scrollTo({ top: 0, behavior: 'instant' });
+                }}
                 className="group relative px-8 py-4 bg-primary-500 text-white rounded-full font-medium hover:bg-primary-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
               >
                 {t('hero.buttons.portfolio')}
@@ -57,6 +62,9 @@ const Hero = ({ imageSrc, imageAlt, title, subtitle }) => {
               </Link>
               <Link 
                 to="/contact" 
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: 'instant' });
+                }}
                 className="px-8 py-4 bg-white text-primary-600 rounded-full font-medium hover:bg-primary-50 transition-all duration-300 shadow-md hover:shadow-lg border-2 border-primary-200"
               >
                 {t('hero.buttons.contact')}

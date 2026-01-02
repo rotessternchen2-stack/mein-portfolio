@@ -8,6 +8,7 @@ import Home from "@pages/Home";
 import About from '@pages/About'
 import Contact from "@pages/Contact";
 import Portfolio from '@pages/Portfolio';
+import PortfolioDetail from '@pages/PortfolioDetail';
 import Impressum from '@pages/Impressum';
 import Datenschutz from '@pages/Datenschutz';
 import NotFound from '@pages/NotFound';
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<div className="pt-20 min-h-screen"><About /></div>} />
                 <Route path="/portfolio" element={<div className="pt-20 min-h-screen"><Portfolio /></div>} />
+                <Route path="/portfolio/:slug" element={<div className="pt-20 min-h-screen"><PortfolioDetail /></div>} />
                 <Route path="/contact" element={<div className="pt-20 min-h-screen"><Contact /></div>} />
                 <Route path="/impressum" element={<div className="pt-20 min-h-screen"><Impressum /></div>} />
                 <Route path="/datenschutz" element={<div className="pt-20 min-h-screen"><Datenschutz /></div>} />

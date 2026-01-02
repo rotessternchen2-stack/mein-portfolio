@@ -33,7 +33,8 @@ const Contact = () => {
       .trim()
       .replace(/[<>]/g, '') // Remove < and > to prevent HTML injection
       .replace(/javascript:/gi, '') // Remove javascript: protocol
-      .replace(/on\w+=/gi, ''); // Remove event handlers like onclick=
+      .replace(/on\w+=/gi, '') // Remove event handlers like onclick=
+      .substring(0, 5000); // Max-Länge für alle Inputs (Sicherheit)
   };
 
   const validateForm = () => {

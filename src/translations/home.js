@@ -56,7 +56,7 @@ export const homeTranslations = {
     },
 
     cta: {
-      title: "Bereit für neue Herausforderungen! 🚀",
+      title: "Bereit für neue\nHerausforderungen! 🚀",
       description: "Kreative Lösungen entwickeln, die wirklich funktionieren – das ist meine Leidenschaft. Ob digitale Produkte, crossmediale Kampagnen oder innovative Konzepte: Ich bringe frische Perspektiven und hands-on Mentalität mit!",
       button: "Kontakt aufnehmen"
     },
@@ -124,7 +124,7 @@ export const homeTranslations = {
     },
 
     cta: {
-      title: "Ready for new challenges! 🚀",
+      title: "Ready for new\nchallenges! 🚀",
       description: "Developing creative solutions that really work – that's my passion. Whether it's digital products, cross-media campaigns, or innovative concepts: I bring fresh perspectives and a hands-on mentality!",
       button: "Get in touch"
     },

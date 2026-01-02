@@ -5,6 +5,11 @@ const Footer = () => {
   const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
   
+  // Funktion zum Scrollen nach oben beim Klick auf einen Link
+  const handleLinkClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+  
   return (
     <footer className="bg-gradient-to-b from-white to-primary-100 border-t-2 border-primary-200 mt-auto">
       <div className="max-w-7xl mx-auto px-8 py-12">
@@ -15,22 +20,22 @@ const Footer = () => {
             <h3 className="text-lg font-bold text-primary-700 mb-4">{t('footer.navigation')}</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-neutral-700 hover:text-primary-600 transition-colors">
+                <Link to="/" onClick={handleLinkClick} className="text-neutral-700 hover:text-primary-600 transition-colors">
                   {t('footer.home')}
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-neutral-700 hover:text-primary-600 transition-colors">
+                <Link to="/about" onClick={handleLinkClick} className="text-neutral-700 hover:text-primary-600 transition-colors">
                   {t('footer.about')}
                 </Link>
               </li>
               <li>
-                <Link to="/portfolio" className="text-neutral-700 hover:text-primary-600 transition-colors">
+                <Link to="/portfolio" onClick={handleLinkClick} className="text-neutral-700 hover:text-primary-600 transition-colors">
                   {t('footer.portfolio')}
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-neutral-700 hover:text-primary-600 transition-colors">
+                <Link to="/contact" onClick={handleLinkClick} className="text-neutral-700 hover:text-primary-600 transition-colors">
                   {t('footer.contact')}
                 </Link>
               </li>
@@ -72,12 +77,12 @@ const Footer = () => {
             <h3 className="text-lg font-bold text-primary-700 mb-4">{t('footer.legal')}</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/impressum" className="text-neutral-700 hover:text-primary-600 transition-colors">
+                <Link to="/impressum" onClick={handleLinkClick} className="text-neutral-700 hover:text-primary-600 transition-colors">
                   {t('footer.imprint')}
                 </Link>
               </li>
               <li>
-                <Link to="/datenschutz" className="text-neutral-700 hover:text-primary-600 transition-colors">
+                <Link to="/datenschutz" onClick={handleLinkClick} className="text-neutral-700 hover:text-primary-600 transition-colors">
                   {t('footer.privacy')}
                 </Link>
               </li>

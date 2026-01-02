@@ -36,6 +36,7 @@ const InputField = ({
           onChange={onChange}
           required={required}
           rows={rows}
+          maxLength={5000}
           aria-invalid={error ? 'true' : 'false'}
           aria-describedby={error ? `${id}-error` : undefined}
         />
@@ -49,6 +50,7 @@ const InputField = ({
           value={value}
           onChange={onChange}
           required={required}
+          maxLength={type === 'email' ? 254 : 500}
           aria-invalid={error ? 'true' : 'false'}
           aria-describedby={error ? `${id}-error` : undefined}
         />

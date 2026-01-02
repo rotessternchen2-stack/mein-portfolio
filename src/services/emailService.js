@@ -16,11 +16,9 @@ let isInitialized = false;
 const initializeEmailJS = () => {
   if (!isInitialized) {
     if (EMAILJS_CONFIG.PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
-      console.warn('⚠️ EmailJS nicht konfiguriert! Siehe .env.example');
     } else {
       emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
       isInitialized = true;
-      console.log('✅ EmailJS initialisiert');
     }
   }
 };
@@ -78,7 +76,6 @@ export const sendContactMessage = async (contactData) => {
       }
     );
 
-    console.log('✅ Admin-Benachrichtigung gesendet:', adminResponse);
 
     // 2. Sende Bestätigungs-Email an User
     const confirmationResponse = await emailjs.send(
@@ -93,7 +90,6 @@ export const sendContactMessage = async (contactData) => {
       }
     );
 
-    console.log('✅ Bestätigungs-Email gesendet:', confirmationResponse);
 
     return {
       success: true,

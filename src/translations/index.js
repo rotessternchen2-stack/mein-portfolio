@@ -6,6 +6,7 @@ import { footerTranslations } from '@translations/footer';
 import { contactTranslations } from '@translations/contact';
 import { portfolioTranslations } from '@translations/portfolio';
 import { legalTranslations } from '@translations/legal';
+import { commonTranslations } from '@translations/common';
 
 export const translations = {
   de: {
@@ -23,7 +24,8 @@ export const translations = {
     contact: contactTranslations.de,
     footer: footerTranslations.de,
     a11y: accessibilityTranslations.de,
-    legal: legalTranslations.de
+    legal: legalTranslations.de,
+    common: commonTranslations.de
   },
   en: {
     nav: navTranslations.en,
@@ -40,6 +42,7 @@ export const translations = {
     contact: contactTranslations.en,
     footer: footerTranslations.en,
     a11y: accessibilityTranslations.en,
-    legal: legalTranslations.en
+    legal: legalTranslations.en,
+    common: commonTranslations.en
   }
 };
