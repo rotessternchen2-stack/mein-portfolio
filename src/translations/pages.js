@@ -26,7 +26,7 @@ Für mich ist Design mehr als nur "schön machen". Es geht darum, Probleme zu l�
 • Brandschutzhelfer, Erste-Hilfe, Business English Certificate
 
 📍 Aktuell
-Ich beende mein Studium im März 2026 und bin ab April 2026 verfügbar für neue Herausforderungen im Bereich Design und Frontend-Entwicklung. Bis dahin arbeite ich fleißig an meinem Abschluss und sammle weiter praktische Erfahrungen in verschiedenen Projekten!
+Seit April 2026 arbeite ich als Social Media Managerin bei der Sächsischen Lotto-GmbH und bringe dort kreative Ideen, strategisches Denken und digitale Kommunikation zusammen. Auch neben meinem Beruf begeistere ich mich für spannende Projekte rund um Social Media, Content Creation und Design und freue mich immer über neue Kontakte und inspirierende Herausforderungen.
 
 Fragen oder Interesse? Ich freue mich über eine Nachricht! 🚀`,
       hardfacts: {
@@ -37,8 +37,8 @@ Fragen oder Interesse? Ich freue mich über eine Nachricht! 🚀`,
         location: { label: "Standort", city: "Leipzig", country: "Deutschland" },
         keySkills: { label: "Schwerpunkte", skills: "UX/UI Design\nSocial Media\nGrafikdesign" },
         languages: { label: "Sprachen", items: "Deutsch (C1)\nEnglisch (B2)" },
-        tools: { label: "Haupttools", items: "Figma, Adobe CC\nChatGPT, Cursor\nCanva" },
-        availability: { label: "Verfügbarkeit", value: "ab April 2026" },
+        tools: { label: "Haupttools", items: "Figma, Canva, Adobe Creative Cloud\nMeta Business Suite, LinkedIn\nChatGPT, Microsoft Copilot, Cursor\nAsana, Trello" }, 
+        availability: { label: "Verfügbarkeit", value: "ab sofort" },
         studies: { label: "Studiengang", line1: "Duales Studium", line2: "Mediendesign (B.A.)", line3: "IU & Check24" }
       },
       funFacts: {
