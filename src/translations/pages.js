@@ -81,6 +81,13 @@ Fragen oder Interesse? Ich freue mich über eine Nachricht! 🚀`,
         subtitle: "Von der Schule über's duale Studium bis... zu Hunden? 🐕",
         items: [
           {
+            date: "Apr 2026 - Heute",
+            title: "Social Media Managerin",
+            company: "Sächsische Lotto-GmbH",
+            description: "Als Social Media Managerin bei der Sächsischen Lotto-GmbH verantworte ich die strategische und operative Betreuung der Social-Media-Kanäle. Dazu gehören die Entwicklung von Content-Strategien, die Planung und Umsetzung von Kampagnen, Community Management, Reporting sowie die Zusammenarbeit mit Agenturen, Partnern und internen Fachbereichen. Mein Fokus liegt darauf, relevante Inhalte zu schaffen, Reichweiten auszubauen und die digitale Markenpräsenz nachhaltig zu stärken.",
+            icon: "🎰"
+          },
+          {
             date: "Okt 2025 - Heute",
             title: "Hundefriseurin (nebenberuflich)",
             company: "Fürstenpfote - Fürstenschnitt",

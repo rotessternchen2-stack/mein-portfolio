@@ -25,8 +25,8 @@ export const homeTranslations = {
         description: "Ich entwickle integrierte Kampagnen, die auf verschiedenen Kanälen (Web, Social Media, Print) eine konsistente Markenbotschaft vermitteln und Zielgruppen gezielt ansprechen."
       },
       socialMedia: {
-        title: "Social Media",
-        description: "Bei KulturLeben Leipzig und Leadfluss habe ich Social-Media-Kanäle betreut und gelernt: Content ist King, aber Timing ist Queen! Von Reels über Stories bis zu Posts – ich erstelle Content, der nicht nur scrollbar ist, sondern auch hängen bleibt. Canva, Business Suite und ein gutes Auge für Trends inklusive."
+        title: "Social Media Management",
+        description: "Als Social Media Managerin bei der Sächsischen Lotto-GmbH entwickle ich kanalgerechte Strategien und Inhalte für Instagram, Facebook, TikTok, LinkedIn und WhatsApp. Von der Content-Planung über Community Management bis hin zu Kampagnen, Reportings und der Zusammenarbeit mit Agenturen verbinde ich Kreativität mit datenbasierten Entscheidungen. Denn guter Content fällt nicht nur auf, sondern erzielt messbare Wirkung."
       },
       branding: {
         title: "Branding & Corporate Identity",
